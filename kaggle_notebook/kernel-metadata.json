@@ -1,0 +1,16 @@
+{
+  "id": "taeyangg4/titanic-2026-ensemble-techniques-public-0-83014",
+  "title": "Titanic 2026 Ensemble Techniques [Public 0.83014]",
+  "code_file": "titanic_2026_ensemble_techniques.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "false",
+  "enable_gpu": "false",
+  "enable_tpu": "false",
+  "enable_internet": "false",
+  "machine_shape": "",
+  "dataset_sources": [],
+  "competition_sources": ["titanic"],
+  "kernel_sources": [],
+  "model_sources": []
+}

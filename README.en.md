@@ -4,6 +4,8 @@ Titanic - Machine Learning from Disaster
 
 ![Kaggle Titanic Experiments](docs/assets/hero.svg)
 
+Kaggle Notebook: [Titanic 2026 Ensemble Techniques - Public 0.83014](https://www.kaggle.com/code/taeyangg4/titanic-2026-ensemble-techniques-public-0-83014)
+
 [한국어](README.md) / [Experiment log](docs/02-experiment-journey.md) / [Validation](docs/03-validation-and-integrity.md) / [Reproduction](docs/05-reproduction.md)
 
 ## About the experiment
