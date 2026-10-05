@@ -39,6 +39,19 @@
 
 [원본 노트북](https://www.kaggle.com/code/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy)
 
+## 외부 공개 노트북 비교군
+
+아래 표는 2026-10-05에 Kaggle 공개 페이지에서 확인한 표시 점수를 기준으로 만든 비교 메모다. 이 저장소에서 해당 노트북을 동일 환경으로 재실행하거나 숨겨진 test 정답으로 검증한 결과가 아니다. `clean 우선 후보`라는 표현도 저자의 제목과 공개된 입력 범위, 현재까지 확인한 구현 정보에 따른 연구 우선순위이며 독립 인증이 아니다.
+
+| 노트북 | Kaggle 표시 점수 | 현재 판정 | 확인한 범위 |
+|---|---:|---|---|
+| [Yoni Krichevsky - Top 3% with only 4 features - no data leakage](https://www.kaggle.com/code/yoni2k/top-3-with-only-4-features-no-data-leakage) | Public/Best 0.81818 | clean 우선 후보 | 페이지 제목이 `no data leakage`를 명시하고 input 1 file로 표시된다. strict fold-safe 기준의 전체 코드 독립 감사 전이므로 인증 표현은 쓰지 않는다. |
+| [Jonathan Oheix - Titanic survivors prediction - TOP 5%](https://www.kaggle.com/code/jonathanoheix/titanic-survivors-prediction-top-5) | Public/Best 0.82296 | 코드 감사 대기 | 페이지에서 input 1 file과 점수는 확인했다. family/ticket target statistic, train/test 결합 전처리 등 strict 기준의 전체 구현 검토는 아직 끝내지 않았다. |
+| [Chris Deotte - Titanic Deep Net [0.82296]](https://www.kaggle.com/code/cdeotte/titanic-deep-net-0-82296) | Best 0.82296 | 코드 감사 대기 | R competition notebook이며 점수는 확인했다. 전체 feature engineering과 평가 경계를 검사하기 전에는 clean으로 분류하지 않는다. |
+| [Titanic competition w/ TensorFlow Decision Forests](https://www.kaggle.com/code/gusthema/titanic-competition-w-tensorflow-decision-forests) | Public/Best 0.80143 | 보수적 외부 baseline | Kaggle competition의 `train.csv`, `test.csv`, `gender_submission.csv`가 입력으로 표시되는 pinned notebook이다. 고득점 후보보다 외부 재현 baseline 역할로 기록한다. |
+
+이 표에서 0.81818은 현재 가장 강하게 clean 비교 대상으로 둘 수 있는 공개 점수이고, 0.82296 두 사례는 감사가 끝나면 상한이 바뀔 수 있는 후보로 남긴다. 반대로 이 프로젝트의 v47 0.83014는 공개 예측 재사용과 Public 피드백 기반 선택이 포함되어 있으므로 이 clean 비교선과 같은 열에 놓고 무누출 성능으로 해석하지 않는다.
+
 ## 도구와 검증 문서
 
 | 자료 | 용도 |

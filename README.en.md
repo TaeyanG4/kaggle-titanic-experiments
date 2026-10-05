@@ -32,6 +32,19 @@ Sources are the [submission receipts](docs/evidence/kaggle-submissions.csv), [ev
 
 The goal was to improve without answer lookup or data leakage. Some historical reproduction branches nevertheless calculated target-derived features before CV, reused public notebook predictions or used leaderboard feedback in later selection. The final Public score should not be read as an independently verified leakage-free generalization result. These limitations are documented in the [validation report](docs/03-validation-and-integrity.md).
 
+## External public-notebook comparators
+
+For context, the repository also tracks public Kaggle notebooks scoring at least 0.80 that are useful leakage-aware comparators. These are the Public/Best Scores displayed on the notebook pages, not scores reproduced in this repository. `Clean candidate` means a priority for comparison under the currently visible information boundary; it is not an independent certification of the full notebook code.
+
+| Public notebook | Displayed score | Current status | Note |
+|---|---:|---|---|
+| [Yoni Krichevsky - Top 3% with only 4 features - no data leakage](https://www.kaggle.com/code/yoni2k/top-3-with-only-4-features-no-data-leakage) | 0.81818 | clean-priority candidate | The notebook explicitly says `no data leakage`, and Kaggle shows one input file. A full independent code audit has not been completed. |
+| [Jonathan Oheix - Titanic survivors prediction - TOP 5%](https://www.kaggle.com/code/jonathanoheix/titanic-survivors-prediction-top-5) | 0.82296 | audit pending | Kaggle shows one input file and the score, but the full feature pipeline has not yet been audited for family/ticket target-derived features. |
+| [Chris Deotte - Titanic Deep Net [0.82296]](https://www.kaggle.com/code/cdeotte/titanic-deep-net-0-82296) | 0.82296 | audit pending | An R competition notebook with a verified displayed score; it is not classified as clean until the full code is audited under the strict leakage boundary. |
+| [Titanic competition w/ TensorFlow Decision Forests](https://www.kaggle.com/code/gusthema/titanic-competition-w-tensorflow-decision-forests) | 0.80143 | conservative baseline | A pinned competition notebook using the Titanic competition inputs. It is kept as a reproducible external baseline rather than a high-score ceiling candidate. |
+
+Under that convention, 0.81818 is the strongest current public score treated as a clean-priority comparator, while the two 0.82296 notebooks remain audit-pending candidates. This table does not reclassify v47's 0.83014 as leakage-free; it is meant to keep different evidence boundaries visibly separate. Source and audit notes are in [references](docs/07-references.md).
+
 ## Workflow
 
 <p align="center">

@@ -32,6 +32,19 @@ Titanic - Machine Learning from Disaster
 
 처음에는 치팅이나 정답 조회, 데이터 누출 없이 개선하는 것을 목표로 했다. 실제 기록에는 전체 학습 라벨로 관계 통계를 만든 뒤 CV를 진행한 재현 코드와 공개 노트북 예측을 사용한 분기가 포함되어 있다. 최종 후보를 고를 때도 Public 결과를 참고했다. 따라서 0.83014는 이 과정에서 얻은 제출 점수이며, 별도로 검증된 무누출 일반화 성능은 아니다. 해당 부분은 [검증과 한계](docs/03-validation-and-integrity.md)에 정리했다.
 
+## 외부 공개 노트북 비교군
+
+현재 프로젝트의 Public 점수를 해석할 때 참고할 수 있도록, Kaggle에 공개된 0.80 이상 노트북 중 누출 여부를 따로 확인할 가치가 있는 사례를 비교군으로 남긴다. 아래 점수는 각 Kaggle 노트북 페이지에 표시된 Public/Best Score이며, 이 저장소에서 동일 환경으로 재현한 값이 아니다. 또한 `clean 후보`는 독립 인증을 뜻하지 않고, 공개 설명과 확인 가능한 입력 범위에서 우선 비교 대상으로 삼는다는 의미다.
+
+| 공개 노트북 | 표시 점수 | 비교 상태 | 메모 |
+|---|---:|---|---|
+| [Yoni Krichevsky - Top 3% with only 4 features - no data leakage](https://www.kaggle.com/code/yoni2k/top-3-with-only-4-features-no-data-leakage) | 0.81818 | clean 우선 후보 | 노트북이 `no data leakage`를 명시하고 Kaggle 페이지에 input 1 file로 표시된다. 별도 전체 코드 감사 전이므로 무누출을 독립 인증한 것은 아니다. |
+| [Jonathan Oheix - Titanic survivors prediction - TOP 5%](https://www.kaggle.com/code/jonathanoheix/titanic-survivors-prediction-top-5) | 0.82296 | 감사 보류 | Kaggle 페이지에서 input 1 file과 점수는 확인되지만, family/ticket target-derived feature 여부를 포함한 전체 코드 감사를 끝내지 않았다. |
+| [Chris Deotte - Titanic Deep Net [0.82296]](https://www.kaggle.com/code/cdeotte/titanic-deep-net-0-82296) | 0.82296 | 감사 보류 | competition input을 쓰는 R 노트북이다. 점수는 확인되지만 strict leakage 기준의 전체 코드 감사 전에는 clean 비교군으로 확정하지 않는다. |
+| [Titanic competition w/ TensorFlow Decision Forests](https://www.kaggle.com/code/gusthema/titanic-competition-w-tensorflow-decision-forests) | 0.80143 | 보수적 baseline | Kaggle competition의 train/test/gender submission 입력을 사용하는 pinned notebook이다. 고득점 상한 후보라기보다 재현 가능한 외부 baseline으로 둔다. |
+
+따라서 현재 문서에서 가장 강하게 clean 비교 대상으로 둘 수 있는 공개 점수는 0.81818이고, 0.82296 두 사례는 코드 감사 대기 후보로 취급한다. 이 비교표는 v47의 0.83014를 무누출 점수로 승격하지 않으며, 오히려 서로 다른 정보 경계의 점수를 분리해서 보기 위한 것이다. 자세한 출처와 판정 메모는 [참고 자료](docs/07-references.md)에 정리했다.
+
 ## 작업 방식
 
 기존 계획과 로그를 읽고 다음 가설을 정한 뒤, 로컬 도구로 코드를 실행했다. 점수만 비교하지 않고 어떤 승객의 예측이 달라졌는지, 다른 seed에서도 결과가 유지되는지 함께 확인했다. 제출이 필요할 때는 파일 검사와 승인을 거쳤다.

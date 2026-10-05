@@ -7,3 +7,5 @@ Published the v1-v47 experiment record with Korean documentation, an English ove
 Expanded the experiment log with feature formulas, ensemble construction, before-and-after results and rejected candidates. Revised the prose in the active documents and replaced inline flowchart blocks with rendered PNGs, SVGs and editable DOT sources.
 
 Added checks for diagram hashes, image structure, HTML image links and active-document consistency. No model was retrained and no new Kaggle submission was made as part of documentation work.
+
+Added a leakage-aware external notebook comparison table to the Korean and English overviews and the reference notes. Public Kaggle scores are recorded as displayed comparators only; audit-pending notebooks are not labeled clean, and no model was rerun or submitted for this documentation update.
