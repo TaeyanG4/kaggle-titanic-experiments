@@ -2,6 +2,10 @@
 
 [프로젝트 홈](../README.md) · [다음: 실험 여정](02-experiment-journey.md)
 
+**프로젝트명:** Kaggle Titanic Experiments (`kaggle-titanic-experiments`)
+
+**대회:** Titanic — Machine Learning from Disaster
+
 ## 1. 출발 질문
 
 핵심 질문은 “GPT가 Titanic에서 몇 점을 내는가?”보다 넓습니다.

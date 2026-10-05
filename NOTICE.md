@@ -1,6 +1,6 @@
 # Attribution and reuse notice
 
-This repository is an experiment record owned by TaeyanG4. Its 2026 campaign was directed by the owner through a GPT web session after an initial Antigravity setup, according to the owner's account. Original 2023 Git history remains separate in `archive/legacy-2023/`.
+**Kaggle Titanic Experiments** (`TaeyanG4/kaggle-titanic-experiments`) is an experiment record for **Titanic — Machine Learning from Disaster**, owned by TaeyanG4. Its 2026 campaign was directed by the owner through a GPT web session after an initial Antigravity setup, according to the owner's account. Original 2023 Git history remains separate in `archive/legacy-2023/`.
 
 Some historical code adapts public Titanic methods, including work by Gunes Evitan and Chris Deotte. The Deotte reproduction also contains passenger-specific predictions recovered from public notebook output. These are not represented as independently learned predictions or as original discoveries of this project. See [references](docs/07-references.md) and [integrity](docs/03-validation-and-integrity.md).
 

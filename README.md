@@ -1,12 +1,16 @@
-# Titanic × GPT Web Experiment
+# Kaggle Titanic Experiments
 
-**사용자가 설계한 스킬과 프롬프트로, GPT 웹 세션은 머신러닝 실험을 어디까지 진행할 수 있을까?**
+**Titanic — Machine Learning from Disaster**
 
-![프로젝트 표지: 사람의 방향 설정, GPT 웹 세션 실행, 기록된 실험 결과](docs/assets/hero.svg)
+피처 엔지니어링·앙상블·검증·실패 분석을 기록한 반자동 머신러닝 실험 프로젝트입니다.
+
+![Kaggle Titanic Experiments: 대회 실험 기록과 관측된 Public 최고점](docs/assets/hero.svg)
 
 [English overview](README.en.md) · [상세 실험 여정](docs/02-experiment-journey.md) · [검증·출처·한계](docs/03-validation-and-integrity.md) · [재현 안내](docs/05-reproduction.md)
 
 ## 이 저장소가 기록하는 것
+
+이 저장소의 중심 질문은 **“사용자가 설계한 스킬과 프롬프트를 활용해, GPT 웹 세션으로 Titanic 머신러닝 실험을 어디까지 진행할 수 있는가?”**입니다. 저장소명은 대회와 실험 기록을 나타내고, 사용한 도구와 사람의 역할은 아래 방법 설명에서 구분합니다.
 
 이 프로젝트는 Titanic 최고점 자체보다 **사용자 정의 스킬과 자연어 프롬프트를 이용한 반자동 데이터 과학 작업의 가능성과 한계**를 관찰하기 위한 개인 실험입니다. 소유자의 설명에 따르면 초기 환경 설정은 Antigravity에서 진행했고, 이후 실험 설계·코드 작성·실행 지시·결과 분석·문서화는 GPT 웹 세션을 통해 수행했습니다. 웹 세션은 로컬 파일·실행 도구와 Kaggle CLI에 연결되어 있었습니다. 사람이 목표와 제약을 정하고, 중간 결과를 질문·검토하고, 제출 여부를 승인했습니다. 완전 자율 AutoML이나 통제된 모델 간 벤치마크가 아닙니다.
 
@@ -121,8 +125,8 @@ data/                        다운로드 안내만 보관; 원본 CSV는 제외
 Python 3.12 환경을 기준으로 다음 **표준 라이브러리 검증**은 모델 재학습이나 Kaggle 인증 없이 실행할 수 있습니다.
 
 ```bash
-git clone https://github.com/TaeyanG4/titanic-gpt-web-experiment.git
-cd titanic-gpt-web-experiment
+git clone https://github.com/TaeyanG4/kaggle-titanic-experiments.git
+cd kaggle-titanic-experiments
 python tools/verify_publication.py
 python tools/replay_final_artifact.py --output replayed_v47.csv
 ```
@@ -139,4 +143,4 @@ python tools/replay_final_artifact.py --output replayed_v47.csv
 
 ---
 
-출처와 재사용 조건은 [NOTICE.md](NOTICE.md)를 참고하세요. 기존 저장소명은 `Kaggle_Titanic_practice`였으며, 초기 커밋 이력은 보존되어 있습니다.
+출처와 재사용 조건은 [NOTICE.md](NOTICE.md)를 참고하세요. 저장소명은 `Kaggle_Titanic_practice` → `titanic-gpt-web-experiment` → **`kaggle-titanic-experiments`** 순으로 변경했으며, 초기 커밋 이력과 실험 증거는 보존되어 있습니다.

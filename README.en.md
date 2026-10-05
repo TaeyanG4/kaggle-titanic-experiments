@@ -1,12 +1,16 @@
-# Titanic × GPT Web Experiment
+# Kaggle Titanic Experiments
 
-**How far can a human-guided GPT web session take a machine-learning experiment using custom skills and prompts?**
+**Titanic — Machine Learning from Disaster**
+
+A documented semi-automated experiment in feature engineering, ensembles, validation and failure analysis.
 
 [한국어](README.md) · [Experiment journey](docs/02-experiment-journey.md) · [Integrity statement](docs/03-validation-and-integrity.md) · [Reproduction](docs/05-reproduction.md)
 
-![Human direction, a GPT web session, and recorded outcomes](docs/assets/hero.svg)
+![Kaggle Titanic Experiments: competition experiments and the recorded Public best](docs/assets/hero.svg)
 
 ## Purpose, not just a score
+
+The research question is **how far a human-guided GPT web session can take the Titanic experiment using owner-configured skills and prompts**. The repository name identifies the competition and its experiment record; the execution tools and human roles are described separately below.
 
 This is an observational case study of semi-automated data-science work on Kaggle Titanic. According to the owner, Antigravity was used for initial setup; subsequent experimentation was directed through a GPT web session using owner-configured skills and prompts. The human supplied goals, challenged explanations, requested further investigation and authorized submissions. Connected local tools executed Python and managed files. This was not a fully autonomous agent benchmark, nor a controlled comparison against manual work or a no-skills baseline.
 
@@ -36,8 +40,8 @@ The final Public artifact combines a historical Gunes-style RF prediction with a
 ## Verify without training or credentials
 
 ```bash
-git clone https://github.com/TaeyanG4/titanic-gpt-web-experiment.git
-cd titanic-gpt-web-experiment
+git clone https://github.com/TaeyanG4/kaggle-titanic-experiments.git
+cd kaggle-titanic-experiments
 python tools/verify_publication.py
 python tools/replay_final_artifact.py --output replayed_v47.csv
 ```
@@ -53,3 +57,5 @@ Raw competition files, credentials, checkpoints and downloaded third-party noteb
 **Conclusion:** the session produced a substantial, inspectable experiment record and a higher observed Public score. It did not prove that custom skills caused the improvement, eliminate validation-selection bias, or establish leakage-free generalization at 83.014%. There is no no-skills control, no sealed final holdout, and no verified complete model/prompt provenance.
 
 Campaign closed. No scheduled training or submission automation is enabled. See [NOTICE](NOTICE.md) before reusing third-party-derived material.
+
+Repository naming history: `Kaggle_Titanic_practice` → `titanic-gpt-web-experiment` → **`kaggle-titanic-experiments`**. Git history and experiment evidence are retained.

@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420" viewBox="0 0 1440 420" role="img" aria-labelledby="title desc">
-<title id="title">Titanic x GPT Web Experiment</title><desc id="desc">Human-guided semi-automated experimentation. Antigravity initial setup, GPT web session execution, recorded Public best 0.83014. Evidence and limitations documented.</desc>
+<title id="title">Kaggle Titanic Experiments</title><desc id="desc">Titanic - Machine Learning from Disaster. Feature engineering, ensembles, validation and a documented semi-automated workflow. Recorded Public best 0.83014. Evidence and limitations documented.</desc>
 <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#071c2e"/><stop offset="1" stop-color="#143c4a"/></linearGradient></defs>
 <rect width="1440" height="420" rx="20" fill="url(#bg)"/>
 <g fill="none" stroke="#ffffff" opacity=".06"><path d="M0 100H1440M0 200H1440M0 300H1440M150 0V420M350 0V420M550 0V420M750 0V420M950 0V420M1150 0V420M1350 0V420"/></g>
-<text x="70" y="85" font-family="Arial,sans-serif" font-size="19" letter-spacing="4" fill="#8ee1d5">HUMAN-GUIDED / SEMI-AUTOMATED / DOCUMENTED</text>
-<text x="65" y="169" font-family="Arial,sans-serif" font-weight="bold" font-size="62" fill="#ffffff">Titanic x GPT Web</text>
-<text x="70" y="225" font-family="Arial,sans-serif" font-size="29" fill="#b9d2dd">Custom skills. Prompts. Experiments. Honest evidence.</text>
-<text x="70" y="292" font-family="Arial,sans-serif" font-size="21" fill="#ffffff">Antigravity setup  /  GPT web-session execution</text>
-<text x="70" y="348" font-family="Arial,sans-serif" font-size="17" fill="#b9d2dd">An observational case study, not a leakage-free performance certificate.</text>
+<text x="70" y="85" font-family="Arial,sans-serif" font-size="19" letter-spacing="4" fill="#8ee1d5">KAGGLE / MACHINE LEARNING / EXPERIMENT LOG</text>
+<text x="65" y="169" font-family="Arial,sans-serif" font-weight="bold" font-size="60" fill="#ffffff">Kaggle Titanic Experiments</text>
+<text x="70" y="225" font-family="Arial,sans-serif" font-size="30" fill="#b9d2dd">Titanic - Machine Learning from Disaster</text>
+<text x="70" y="280" font-family="Arial,sans-serif" font-size="21" fill="#ffffff">Feature engineering  /  Ensembles  /  Validation</text>
+<text x="70" y="318" font-family="Arial,sans-serif" font-size="18" fill="#b9d2dd">Human-guided, semi-automated experimentation</text>
+<text x="70" y="370" font-family="Arial,sans-serif" font-size="16" fill="#b9d2dd">Recorded results and limitations; not an independent generalization certificate.</text>
 <rect x="1045" y="105" width="325" height="205" rx="18" fill="#ffffff" opacity=".08"/>
 <text x="1080" y="152" font-family="Arial,sans-serif" font-size="18" fill="#c7e3e9">RECORDED PUBLIC BEST</text>
 <text x="1074" y="224" font-family="Arial,sans-serif" font-weight="bold" font-size="60" fill="#8ee1d5">0.83014</text>

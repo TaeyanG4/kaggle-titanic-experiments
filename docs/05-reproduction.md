@@ -15,12 +15,19 @@
 ## 2. 저장소 받기
 
 ```bash
-git clone https://github.com/TaeyanG4/titanic-gpt-web-experiment.git
-cd titanic-gpt-web-experiment
+git clone https://github.com/TaeyanG4/kaggle-titanic-experiments.git
+cd kaggle-titanic-experiments
 python tools/verify_publication.py
 ```
 
-Python 3.12를 기록 환경으로 삼았습니다. 위 검증 도구 자체는 표준 라이브러리만 사용합니다. 원래 이름 `Kaggle_Titanic_practice`의 커밋 이력은 유지했으며, 새 이름으로 remote를 갱신했습니다.
+Python 3.12를 기록 환경으로 삼았습니다. 위 검증 도구 자체는 표준 라이브러리만 사용합니다. 최종 저장소명은 **`kaggle-titanic-experiments`**입니다. 기존 `Kaggle_Titanic_practice`와 정리 중 사용한 `titanic-gpt-web-experiment`의 커밋 이력은 유지했습니다.
+
+이미 이전 이름으로 clone한 경우에는 기존 작업 폴더 안에서 remote만 갱신하면 됩니다. 로컬 폴더명 자체를 바꿀 필요는 없습니다.
+
+```bash
+git remote set-url origin https://github.com/TaeyanG4/kaggle-titanic-experiments.git
+git remote -v
+```
 
 ## 3. 최종 파일을 다시 조립하기
 

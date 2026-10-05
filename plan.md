@@ -1,4 +1,6 @@
-# Finalization plan — completed campaign, no active training
+# Kaggle Titanic Experiments — Finalization plan
+
+Repository: `TaeyanG4/kaggle-titanic-experiments`. Competition: **Titanic — Machine Learning from Disaster**. The campaign is completed; no active training is running as part of this publication.
 
 The October 2026 v1-v47 experiment is closed. The repository is now an auditable case study of owner-guided GPT web-session experimentation, following Antigravity initial setup as described by the owner.
 

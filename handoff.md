@@ -1,6 +1,8 @@
-# Final handoff
+# Kaggle Titanic Experiments — Final handoff
 
-Repository: `TaeyanG4/titanic-gpt-web-experiment` (formerly `Kaggle_Titanic_practice`). Original Git history is retained.
+Repository: `TaeyanG4/kaggle-titanic-experiments`. Competition: **Titanic — Machine Learning from Disaster**. Previous names: `Kaggle_Titanic_practice`, then `titanic-gpt-web-experiment`. Original Git history is retained.
+
+Use the competition-centered project title in headers and links. Preserve the Antigravity setup and GPT web-session execution details as methodology, not as part of the repository name.
 
 Start with [README](README.md), [integrity](docs/03-validation-and-integrity.md), and [reproduction](docs/05-reproduction.md). Historical working notes are in [archive/session-notes](archive/session-notes/).
 

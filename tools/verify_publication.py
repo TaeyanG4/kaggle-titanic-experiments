@@ -5,11 +5,15 @@ import csv
 import hashlib
 import json
 import re
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import unquote
 from replay_final_artifact import replay, EXPECTED
 
 ROOT = Path(__file__).resolve().parents[1]
+PROJECT_TITLE = 'Kaggle Titanic Experiments'
+REPO_SLUG = 'kaggle-titanic-experiments'
+REPO_URL = f'https://github.com/TaeyanG4/{REPO_SLUG}'
 
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -55,9 +59,29 @@ def main() -> None:
 
     docs = list(ROOT.glob('*.md')) + list((ROOT/'docs').glob('*.md'))
     docs += [ROOT/'data/README.md', ROOT/'exports/README.md', ROOT/'submissions/README.md', ROOT/'notebooks/README.md', ROOT/'archive/README.md']
+    # Current entry points must use the final name. Plain historical names in
+    # the changelog and archived notes remain valid provenance, not live URLs.
+    for relative in ['README.md', 'README.en.md']:
+        text = (ROOT/relative).read_text(encoding='utf-8')
+        if not text.startswith(f'# {PROJECT_TITLE}\n'):
+            errors.append(f'Unexpected project title: {relative}')
+        if f'git clone {REPO_URL}.git' not in text or f'cd {REPO_SLUG}\n' not in text:
+            errors.append(f'Outdated clone instructions: {relative}')
+    previous_url = re.compile(r'https://github\.com/TaeyanG4/(?:titanic-gpt-web-experiment|Kaggle_Titanic_practice)(?=[/\s.#`)]|$)')
+    try:
+        hero = ET.parse(ROOT/'docs/assets/hero.svg').getroot()
+        hero_title = hero.find('{http://www.w3.org/2000/svg}title')
+        if hero_title is None or hero_title.text != PROJECT_TITLE:
+            errors.append('Cover title does not match the current project name.')
+        if PROJECT_TITLE not in (ROOT/'tools/build_report_assets.py').read_text(encoding='utf-8'):
+            errors.append('Cover generator does not contain the current project name.')
+    except (ET.ParseError, FileNotFoundError) as exc:
+        errors.append(f'Invalid cover SVG: {exc}')
     links = 0
     for path in docs:
         text = path.read_text(encoding='utf-8')
+        if previous_url.search(text):
+            errors.append(f'Outdated repository URL in {path.relative_to(ROOT)}')
         for target in re.findall(r'!?\[[^\]]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)',text):
             if target.startswith(('http://','https://','mailto:','#')): continue
             target = unquote(target.split('#',1)[0])
@@ -90,6 +114,7 @@ def main() -> None:
         print('\n'.join('FAIL: '+e for e in errors));raise SystemExit(1)
     print(f'PASS: {len(manifests)} submission artifacts, {len(inventory)} snapshot files, {len(receipts)} campaign receipts.')
     print(f'PASS: frozen v47 replay, notebook output policy, {links} local links, {scanned} text-file credential scans.')
+    print(f'PASS: project titles, cover and current repository URLs use {REPO_SLUG}.')
     print('Scope: artifact/document checks only; not statistical significance, code safety or leakage certification.')
 
 if __name__=='__main__': main()
