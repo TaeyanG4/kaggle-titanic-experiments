@@ -1,0 +1,39 @@
+{
+  "models": [
+    "TabPFN_v2_5",
+    "TabPFN_v3"
+  ],
+  "variants": [
+    "v2base_typed22",
+    "v2base_familyfare_typed22",
+    "gunes24_typed22"
+  ],
+  "typed_columns": [
+    "LegacyRate",
+    "LegacyNA",
+    "FamilySmooth",
+    "FamilyCount",
+    "TicketSmooth",
+    "TicketCount",
+    "CombinedSmooth",
+    "EvidenceCount",
+    "FamilyWC",
+    "FamilyWCCount",
+    "FamilyAM",
+    "FamilyAMCount",
+    "TicketWC",
+    "TicketWCCount",
+    "TicketAM",
+    "TicketAMCount",
+    "SameRoleFamily",
+    "SameRoleFamilyCount",
+    "SameRoleTicket",
+    "SameRoleTicketCount",
+    "SameRoleCombined",
+    "SameRoleEvidenceCount"
+  ],
+  "alpha": 2.0,
+  "validation": "trusted fixed folds, validation-aware relation eligibility",
+  "test_inference": "actual-test-aware relation eligibility, separate fold model",
+  "no_submission": true
+}

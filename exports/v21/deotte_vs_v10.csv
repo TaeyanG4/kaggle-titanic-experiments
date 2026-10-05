@@ -1,0 +1,7 @@
+variant,test_positives,changed_vs_v10
+gender,152,35
+wcg,146,21
+wcg_male,152,27
+wcg_female,134,31
+wcg_both,140,37
+wcg_xgb_exact_public,140,31

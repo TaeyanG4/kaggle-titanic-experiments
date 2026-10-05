@@ -1,0 +1,22 @@
+{
+  "requested_models": [
+    "TabPFN_v2_5",
+    "TabPFN_v3"
+  ],
+  "requested_variants": [
+    "baseline",
+    "familyfare"
+  ],
+  "completed": [
+    "TabPFN_v2_5__baseline",
+    "TabPFN_v2_5__familyfare",
+    "TabPFN_v3__baseline",
+    "TabPFN_v3__familyfare",
+    "TabPFN_v2__baseline",
+    "TabPFN_v2__familyfare"
+  ],
+  "blocked_or_failed": [],
+  "fold_manifest": "H:\\kaggle\\practice\\Titanic - Machine Learning from Disaster\\exports\\wcg_audit_v1\\fold_manifest_seed42.csv",
+  "champion_reference": "v5 robust hard vote, Public 0.79665, OOF Accuracy 0.85410",
+  "no_submission": true
+}

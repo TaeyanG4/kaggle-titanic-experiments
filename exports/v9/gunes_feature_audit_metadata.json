@@ -1,0 +1,22 @@
+{
+  "source": "Gunes Evitan - Titanic Advanced Feature Engineering Tutorial",
+  "source_url": "https://www.kaggle.com/code/gunesevitan/titanic-advanced-feature-engineering-tutorial",
+  "variants": [
+    "baseline",
+    "gunes_agefare_bins",
+    "gunes_deck_group",
+    "gunes_title_group",
+    "gunes_structural",
+    "gunes_survival_rate_exact",
+    "gunes_survival_rate_components",
+    "gunes_all"
+  ],
+  "models": [
+    "GradientBoosting",
+    "XGBoost",
+    "CatBoost"
+  ],
+  "fold_manifest": "H:\\kaggle\\practice\\Titanic - Machine Learning from Disaster\\exports\\wcg_audit_v1\\fold_manifest_seed42.csv",
+  "target_encoding_policy": "fold-safe peer labels only; self-excluded for fold-train",
+  "no_submission": true
+}

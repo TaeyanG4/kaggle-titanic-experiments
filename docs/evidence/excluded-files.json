@@ -1,0 +1,38 @@
+[
+  {
+    "path": "exports/v13/test_conflict_peer_evidence.csv",
+    "reason": "raw-passenger-fields"
+  },
+  {
+    "path": "exports/v13/test_v10_v5_conflicts.csv",
+    "reason": "raw-passenger-fields"
+  },
+  {
+    "path": "exports/v13/v10_guard_changed_rows.csv",
+    "reason": "raw-passenger-fields"
+  },
+  {
+    "path": "exports/v35/passenger_hardness.csv",
+    "reason": "raw-passenger-fields"
+  },
+  {
+    "path": "exports/v35/stable_easy_cases.csv",
+    "reason": "raw-passenger-fields"
+  },
+  {
+    "path": "exports/v35/stable_hard_cases.csv",
+    "reason": "raw-passenger-fields"
+  },
+  {
+    "path": "exports/v35/v5_rescue_profile.csv",
+    "reason": "raw-passenger-fields"
+  },
+  {
+    "path": "exports/v7/champion_error_rows.csv",
+    "reason": "raw-passenger-fields"
+  },
+  {
+    "path": "exports/v7/consensus_rescue_rows.csv",
+    "reason": "raw-passenger-fields"
+  }
+]

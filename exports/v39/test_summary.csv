@@ -1,0 +1,6 @@
+variant,switches_vs_v10,switched_ids,test_positives_after_gate
+name_only,1,1073,148
+ticket_only,23,"906,928,929,964,980,982,990,1036,1049,1051,1061,1078,1089,1150,1173,1174,1183,1205,1207,1237,1301,1302,1304",128
+cabin_only,5,"933,973,1034,1179,1200",154
+name_ticket,1,980,148
+full_text,1,980,148

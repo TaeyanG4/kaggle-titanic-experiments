@@ -1,0 +1,7 @@
+SurvivalRateNA,Sex,n,v10_alive,v5_alive,tabpfn_alive
+0.0,female,7,7,0,6
+0.0,male,1,0,1,1
+0.5,female,2,0,2,1
+0.5,male,1,1,0,0
+1.0,female,4,0,4,2
+1.0,male,7,4,3,3

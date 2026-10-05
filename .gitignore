@@ -1,0 +1,34 @@
+# Credentials and private machine state
+.env
+.env.*
+!.env.example
+.kaggle/
+.kaggle-skill/
+kaggle.json
+*credentials*.json
+*access_token*
+.publication-worktree/
+
+# Raw competition files: obtain from Kaggle
+data/*
+!data/README.md
+
+# Runtime state and heavy model artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+catboost_info/
+checkpoints/
+*.log
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.joblib
+*.pkl
+*.zip
+replayed_*.csv
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+model,variant,binary_disagreement_vs_v5,v5_wrong_candidate_right,v5_right_candidate_wrong,net_unique_correct_vs_v5,correlation_vs_v4b,correlation_vs_rulefit
+TabPFN_v3,familyfare_gunes_all,34,14,20,-6,0.9854560774919375,0.9530195449323683
+TabPFN_v2_5,familyfare_gunes_rates,31,12,19,-7,0.9866417498713262,0.96293078533756
+TabPFN_v3,familyfare_gunes_rates,31,12,19,-7,0.9878004864137213,0.959549297309061
+TabPFN_v3,gunes_rates,27,11,16,-5,0.9890792182274336,0.9602059311815998
+TabPFN_v2_5,familyfare_gunes_all,29,11,18,-7,0.9878064865755244,0.9630504811784122
+TabPFN_v3,gunes_all,32,11,21,-10,0.9884707006453085,0.9562107903590608
+TabPFN_v2_5,gunes_rates,25,10,15,-5,0.9879066445144247,0.96288647668127
+TabPFN_v3,gunes_structural,30,10,20,-10,0.9907030478040818,0.9597251899627144
+TabPFN_v2_5,gunes_all,27,9,18,-9,0.9890336292815647,0.9637471224540509
+TabPFN_v2_5,gunes_structural,29,9,20,-11,0.9917546118163678,0.9678444301265123

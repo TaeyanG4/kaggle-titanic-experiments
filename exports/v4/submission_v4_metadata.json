@@ -1,0 +1,20 @@
+{
+  "model": "TabICLv2",
+  "fixed_threshold": 0.5,
+  "fixed_oof_accuracy": 0.8507295173961841,
+  "oof_roc_auc": 0.9008564215639281,
+  "crossfit_threshold_accuracy": 0.8496071829405163,
+  "fold_selected_thresholds": [
+    0.5,
+    0.54,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "median_crossfit_threshold": 0.5,
+  "selected_threshold": 0.5,
+  "threshold_policy": "fixed_0.5",
+  "test_positive_predictions": 151,
+  "test_rows": 418,
+  "note": "Candidate built from saved fold-safe v4 probabilities; no training and no Kaggle submission."
+}

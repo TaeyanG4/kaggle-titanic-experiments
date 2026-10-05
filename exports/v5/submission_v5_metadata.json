@@ -1,0 +1,20 @@
+{
+  "version": "v5",
+  "model": "MLP_PLR",
+  "oof_accuracy_at_0_5": 0.8529741863075196,
+  "oof_roc_auc": 0.8859489342664495,
+  "crossfit_threshold_accuracy": 0.8507295173961841,
+  "fold_selected_thresholds": [
+    0.55,
+    0.5,
+    0.5,
+    0.5,
+    0.55
+  ],
+  "median_crossfit_threshold": 0.5,
+  "final_threshold": 0.5,
+  "threshold_policy": "fixed_0.5",
+  "test_positive_predictions": 152,
+  "test_rows": 418,
+  "status": "local_candidate_not_submitted"
+}

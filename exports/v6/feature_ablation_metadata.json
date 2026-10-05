@@ -1,0 +1,38 @@
+{
+  "version": "v6",
+  "fold_manifest": "H:\\kaggle\\practice\\Titanic - Machine Learning from Disaster\\exports\\wcg_audit_v1\\fold_manifest_seed42.csv",
+  "variants": {
+    "baseline": [],
+    "cabin_missing": [
+      "cabin_missing"
+    ],
+    "relational": [
+      "relational"
+    ],
+    "interactions": [
+      "interactions"
+    ],
+    "wcg_detail": [
+      "wcg_detail"
+    ],
+    "structural_all": [
+      "cabin_missing",
+      "relational",
+      "interactions"
+    ],
+    "all": [
+      "cabin_missing",
+      "relational",
+      "interactions",
+      "wcg_detail"
+    ]
+  },
+  "models": [
+    "GradientBoosting",
+    "XGBoost",
+    "CatBoost",
+    "RuleFit",
+    "LogisticRegression"
+  ],
+  "note": "All target-derived WCG-detail features are constructed inside each fold."
+}

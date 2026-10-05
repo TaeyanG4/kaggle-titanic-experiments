@@ -1,0 +1,494 @@
+[
+  {
+    "file": "submissions/submission.csv",
+    "sha256": "ce8e484730a667e0b5d80068cf8f1418444e0113a9af28996dd8185df60ea0e4",
+    "rows": 418,
+    "positive_predictions": 135
+  },
+  {
+    "file": "submissions/submission_20261004_score_0.79186.csv",
+    "sha256": "3a52707b70624c16b075cd0f42b2a3841b31884ab2085f72fded7e21f4764d31",
+    "rows": 418,
+    "positive_predictions": 157
+  },
+  {
+    "file": "submissions/submission_v10_gunes_original_reproduction.csv",
+    "sha256": "1e5727608554e3fe2520877bed5c0e9a3dc6a05b88379ba1a8ee8ab576d6cdac",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v10_score_0.81578.csv",
+    "sha256": "1e5727608554e3fe2520877bed5c0e9a3dc6a05b88379ba1a8ee8ab576d6cdac",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v11_leaderboard_cv.csv",
+    "sha256": "1e5727608554e3fe2520877bed5c0e9a3dc6a05b88379ba1a8ee8ab576d6cdac",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v11_leaderboard_full.csv",
+    "sha256": "0eb9794841740be863d912392df939785326bf00bfedf519da9416c623a326a2",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v11_single_best_cv.csv",
+    "sha256": "f0eec2517b387895bfa2c402648845c8e74ab0bedac7166c77d3cead4c6b16c7",
+    "rows": 418,
+    "positive_predictions": 147
+  },
+  {
+    "file": "submissions/submission_v11_single_best_full.csv",
+    "sha256": "3e566b0fc3217e01041b419789db56078dc5563775018518b137f9949e653021",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v12_rule_mlp_t3ff.csv",
+    "sha256": "f8106d12f77b4eac288ecccb59bbc9c03e230ce77bf3da3cc5f807dbbc04e15a",
+    "rows": 418,
+    "positive_predictions": 146
+  },
+  {
+    "file": "submissions/submission_v13_crossfit_logistic_group_meta.csv",
+    "sha256": "bc14b7208258887c85dd1d8a6a5e5f164ad293327b8fa03508e72ebbe75a0fc6",
+    "rows": 418,
+    "positive_predictions": 150
+  },
+  {
+    "file": "submissions/submission_v13_guard_no_group_consensus.csv",
+    "sha256": "719adc955f1c3e8eae1d49a268e28ee0f669f34cdee7370a2e4b0834912b0039",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v13_guard_unanimous4.csv",
+    "sha256": "360b7e47a977de59b26b7ea9c6cc8914096fbfb0fd3c080629d128c953af5056",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v13_guard_unanimous4_adult_male.csv",
+    "sha256": "0cd1294696af1afb653e8e9485e97e735a02d8d25d261a13c624bf0f19630dc1",
+    "rows": 418,
+    "positive_predictions": 146
+  },
+  {
+    "file": "submissions/submission_v13_guard_unanimous4_no_group.csv",
+    "sha256": "719adc955f1c3e8eae1d49a268e28ee0f669f34cdee7370a2e4b0834912b0039",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v13_guard_unanimous4_no_group_or_adult_male.csv",
+    "sha256": "552950a7ea3f530f9a0cc8e173e1e5628675a8b7c03383079a4902cedc782fc7",
+    "rows": 418,
+    "positive_predictions": 146
+  },
+  {
+    "file": "submissions/submission_v13_guard_v5_tab_adult_male.csv",
+    "sha256": "1e03e17e250d4844045259d4ff864ff6f40ce61695b60aa95da2d75288eace9c",
+    "rows": 418,
+    "positive_predictions": 144
+  },
+  {
+    "file": "submissions/submission_v13_guard_v5_tab_no_group.csv",
+    "sha256": "719adc955f1c3e8eae1d49a268e28ee0f669f34cdee7370a2e4b0834912b0039",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v13_guard_v5_tab_no_group_or_adult_male.csv",
+    "sha256": "d576674e58f306bf390a83502f261c74ec3d9ba927f0faeb692f8e0677863c9c",
+    "rows": 418,
+    "positive_predictions": 144
+  },
+  {
+    "file": "submissions/submission_v13_majority_v5_trans_tab.csv",
+    "sha256": "2b4b738142dc3aaa21df8f088273f318534871b5823727e2e3e811ecec19aaf5",
+    "rows": 418,
+    "positive_predictions": 150
+  },
+  {
+    "file": "submissions/submission_v13_prefer_trans_any_group.csv",
+    "sha256": "03565e48b6bb6ad994d947eadc72662be897a20d0c6dc9cce19fa42f3b6fa853",
+    "rows": 418,
+    "positive_predictions": 143
+  },
+  {
+    "file": "submissions/submission_v13_prefer_trans_both_group_tab_agree.csv",
+    "sha256": "9274cb210652c8d77404a735812774937acfd27890b947e81ee3c1facbf61420",
+    "rows": 418,
+    "positive_predictions": 145
+  },
+  {
+    "file": "submissions/submission_v13_prefer_trans_both_groups.csv",
+    "sha256": "dd76ff6ff986f06485cb3d1d03f7f5756d9757f927e005ebb3526166e76d599b",
+    "rows": 418,
+    "positive_predictions": 144
+  },
+  {
+    "file": "submissions/submission_v13_prefer_trans_extreme_group.csv",
+    "sha256": "dd76ff6ff986f06485cb3d1d03f7f5756d9757f927e005ebb3526166e76d599b",
+    "rows": 418,
+    "positive_predictions": 144
+  },
+  {
+    "file": "submissions/submission_v13_prefer_trans_extreme_tab_agree.csv",
+    "sha256": "9274cb210652c8d77404a735812774937acfd27890b947e81ee3c1facbf61420",
+    "rows": 418,
+    "positive_predictions": 145
+  },
+  {
+    "file": "submissions/submission_v13_prefer_trans_group_tab_agree.csv",
+    "sha256": "d3a32347f5d0bce7379a27e4623b58cc3f74d8520c2258a965ca41b11c76455b",
+    "rows": 418,
+    "positive_predictions": 144
+  },
+  {
+    "file": "submissions/submission_v14_rule_mlp_t3.csv",
+    "sha256": "f8106d12f77b4eac288ecccb59bbc9c03e230ce77bf3da3cc5f807dbbc04e15a",
+    "rows": 418,
+    "positive_predictions": 146
+  },
+  {
+    "file": "submissions/submission_v14_stack6_crossfit.csv",
+    "sha256": "7e4bd78d2e702768493c9b8663357b51b884f7dec8615d7cdc52a3f0b6631042",
+    "rows": 418,
+    "positive_predictions": 153
+  },
+  {
+    "file": "submissions/submission_v14_switch_if_t3_t25_agree.csv",
+    "sha256": "6ad4e49d2db92f944497c7a095247315c364ed2500e651516ae58113abd80629",
+    "rows": 418,
+    "positive_predictions": 155
+  },
+  {
+    "file": "submissions/submission_v14_switch_if_t3_t25_rf_agree.csv",
+    "sha256": "6ad4e49d2db92f944497c7a095247315c364ed2500e651516ae58113abd80629",
+    "rows": 418,
+    "positive_predictions": 155
+  },
+  {
+    "file": "submissions/submission_v14_v4b_mlp_t3.csv",
+    "sha256": "e09f29ab89c33798c82d725a9b177fa88caf15054c6fb2d26c55042541f925f3",
+    "rows": 418,
+    "positive_predictions": 154
+  },
+  {
+    "file": "submissions/submission_v14_v4b_rule_t3.csv",
+    "sha256": "f680aa823dbb34ec4406ed02d8baf2a8c21d047645a68e93e81e347f88723263",
+    "rows": 418,
+    "positive_predictions": 153
+  },
+  {
+    "file": "submissions/submission_v14_vote5_v5_t3_t25.csv",
+    "sha256": "e09f29ab89c33798c82d725a9b177fa88caf15054c6fb2d26c55042541f925f3",
+    "rows": 418,
+    "positive_predictions": 154
+  },
+  {
+    "file": "submissions/submission_v15_mlp_t3_cat.csv",
+    "sha256": "cd0018e7280f0db24bbec21097d2dd7ab069da459ce6d31b210c6a837e0fe0ec",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v15_rule_mlp_cat.csv",
+    "sha256": "f8106d12f77b4eac288ecccb59bbc9c03e230ce77bf3da3cc5f807dbbc04e15a",
+    "rows": 418,
+    "positive_predictions": 146
+  },
+  {
+    "file": "submissions/submission_v15_rule_t3_cat.csv",
+    "sha256": "cd0018e7280f0db24bbec21097d2dd7ab069da459ce6d31b210c6a837e0fe0ec",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v15_stack5_crossfit.csv",
+    "sha256": "8cec6eec830fe21c20e1aa6cd4d75790dec8f64cdfe278151d37d7eb6bac360c",
+    "rows": 418,
+    "positive_predictions": 152
+  },
+  {
+    "file": "submissions/submission_v15_switch_t25_cat.csv",
+    "sha256": "3219b74b8a2d70ee6e66574afff631a8c222d05966a9da6882072693d4b9118f",
+    "rows": 418,
+    "positive_predictions": 155
+  },
+  {
+    "file": "submissions/submission_v15_switch_t3_cat.csv",
+    "sha256": "cd0018e7280f0db24bbec21097d2dd7ab069da459ce6d31b210c6a837e0fe0ec",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v15_switch_t3_t25_cat.csv",
+    "sha256": "8775dd04d23cac54eda4f6e57fef90a9e2782bd3710a6c378d97fd33fe5e0b23",
+    "rows": 418,
+    "positive_predictions": 154
+  },
+  {
+    "file": "submissions/submission_v15_vote5_v5_t25_cat.csv",
+    "sha256": "f45af2ce14cde03191b928c77cb5f8d2f70b466c383c85921e68f8ac11c55c39",
+    "rows": 418,
+    "positive_predictions": 153
+  },
+  {
+    "file": "submissions/submission_v15_vote5_v5_t3_cat.csv",
+    "sha256": "87cd3eec0fe37deaa96c7c9f75c03b847eee58c012ea4fecd9b8d52607200f9c",
+    "rows": 418,
+    "positive_predictions": 152
+  },
+  {
+    "file": "submissions/submission_v18_v10_guard_all3.csv",
+    "sha256": "72c1eb3fd0eeed3b6050e27d72172a7acfdc42aaa102c69b4fffb7f890e9b862",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v18_v10_guard_all3_none.csv",
+    "sha256": "719adc955f1c3e8eae1d49a268e28ee0f669f34cdee7370a2e4b0834912b0039",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v18_v10_guard_all3_weak.csv",
+    "sha256": "71893475ce3964b02d062dfeaaee2eceb2a548db87ed2104a01e1438f05b9ff3",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v18_v10_guard_t3cat_none.csv",
+    "sha256": "719adc955f1c3e8eae1d49a268e28ee0f669f34cdee7370a2e4b0834912b0039",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v18_v10_guard_t3cat_weak.csv",
+    "sha256": "71893475ce3964b02d062dfeaaee2eceb2a548db87ed2104a01e1438f05b9ff3",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v1_score_0.79186.csv",
+    "sha256": "3a52707b70624c16b075cd0f42b2a3841b31884ab2085f72fded7e21f4764d31",
+    "rows": 418,
+    "positive_predictions": 157
+  },
+  {
+    "file": "submissions/submission_v2.csv",
+    "sha256": "012d5f0ea1c88e59af967adf69bfd98c4fdcc33774dd42f028b1d55930bcd8f4",
+    "rows": 418,
+    "positive_predictions": 155
+  },
+  {
+    "file": "submissions/submission_v21_deotte_gender.csv",
+    "sha256": "7a262a7f4cb807f53911dccc84257ed3976b21b7b50ffc468b58446bff8bb6a4",
+    "rows": 418,
+    "positive_predictions": 152
+  },
+  {
+    "file": "submissions/submission_v21_deotte_wcg.csv",
+    "sha256": "302bb572c93df7ad8d1b9863ed291494c0f8a3e76d6fc2dd70257db0d103d8c4",
+    "rows": 418,
+    "positive_predictions": 146
+  },
+  {
+    "file": "submissions/submission_v21_deotte_wcg_both.csv",
+    "sha256": "53e7082e65a9c9c87c63e56ed7ad5b373f94bc8d1e2ccf376a69b05cb0020199",
+    "rows": 418,
+    "positive_predictions": 140
+  },
+  {
+    "file": "submissions/submission_v21_deotte_wcg_female.csv",
+    "sha256": "c3c684cb6cd2a687fc05176448a910551e368bcfb2cc6b6a280f2bd4c26e3243",
+    "rows": 418,
+    "positive_predictions": 134
+  },
+  {
+    "file": "submissions/submission_v21_deotte_wcg_male.csv",
+    "sha256": "20717d208a3c9d059d74bf69ae76b7a14dd65c22dfb0507c647e1964a83ea607",
+    "rows": 418,
+    "positive_predictions": 152
+  },
+  {
+    "file": "submissions/submission_v21_deotte_wcg_xgb_exact_public.csv",
+    "sha256": "5ad04f28555eeab862e933f067a18c88e7bda36f0200af1ea6390de577d9479d",
+    "rows": 418,
+    "positive_predictions": 140
+  },
+  {
+    "file": "submissions/submission_v24_v10_deotte_all_deotte_female_death.csv",
+    "sha256": "2a4e9eb5893b1f19059f06a8f23defd1eb8a0ff46c6fab06c751c90ae1d5fcee",
+    "rows": 418,
+    "positive_predictions": 136
+  },
+  {
+    "file": "submissions/submission_v24_v10_deotte_all_female_death_plus_wcg_boys.csv",
+    "sha256": "2a4e9eb5893b1f19059f06a8f23defd1eb8a0ff46c6fab06c751c90ae1d5fcee",
+    "rows": 418,
+    "positive_predictions": 136
+  },
+  {
+    "file": "submissions/submission_v24_v10_deotte_wcg_core.csv",
+    "sha256": "956df7b606c9f4c0d16e95e4e8231d30814f061524adb52a42c2a225998747db",
+    "rows": 418,
+    "positive_predictions": 145
+  },
+  {
+    "file": "submissions/submission_v24_v10_deotte_wcg_female_death.csv",
+    "sha256": "956df7b606c9f4c0d16e95e4e8231d30814f061524adb52a42c2a225998747db",
+    "rows": 418,
+    "positive_predictions": 145
+  },
+  {
+    "file": "submissions/submission_v25_final_majority.csv",
+    "sha256": "9d20abcb5604abac3f26f8d0d40344e2e44eafc698868158b9c621ecfc9c57d7",
+    "rows": 418,
+    "positive_predictions": 147
+  },
+  {
+    "file": "submissions/submission_v25_score_0.79186.csv",
+    "sha256": "9d20abcb5604abac3f26f8d0d40344e2e44eafc698868158b9c621ecfc9c57d7",
+    "rows": 418,
+    "positive_predictions": 147
+  },
+  {
+    "file": "submissions/submission_v3.csv",
+    "sha256": "d1628d951837498e80266e74c785cffc9507f3886d1149c8479a4165634cbcdf",
+    "rows": 418,
+    "positive_predictions": 155
+  },
+  {
+    "file": "submissions/submission_v32_typedeb_cat.csv",
+    "sha256": "d7b0f58275df4f739d473393732ca77f4397d903307be7a152a7482823802e6e",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v34_consensus_mean.csv",
+    "sha256": "ac1e4d082f04ec671c510f90f86fb53de17f1e2ce7ffb95aa53da28bfed9e71c",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v34_consensus_vote.csv",
+    "sha256": "ac1e4d082f04ec671c510f90f86fb53de17f1e2ce7ffb95aa53da28bfed9e71c",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v37_text_rescue_gate.csv",
+    "sha256": "145726f64c528be2ef9d332a3e1aa054d1ba9ff6125aeed34d3047759e6f0590",
+    "rows": 418,
+    "positive_predictions": 145
+  },
+  {
+    "file": "submissions/submission_v38_v10_text_rescue.csv",
+    "sha256": "87b091816d51d2131818ed8f9a3cdc3ceb952ac0eda8940f8a4434a8812b64ec",
+    "rows": 418,
+    "positive_predictions": 148
+  },
+  {
+    "file": "submissions/submission_v3_hybrid_50_50.csv",
+    "sha256": "aa52337804186b8c9f2fdf3a58021bdbe02be1337753bb098b45fd3967eab0ed",
+    "rows": 418,
+    "positive_predictions": 156
+  },
+  {
+    "file": "submissions/submission_v4.csv",
+    "sha256": "b190211d0176c811ca101aa3443081e3c4a2e193c626e41a9ee4ae922faf7ac2",
+    "rows": 418,
+    "positive_predictions": 151
+  },
+  {
+    "file": "submissions/submission_v43_ticket_p3_full.csv",
+    "sha256": "60dc01a88a19e8a6566b9b2affadc221a8b33ac87c4cfccda0956d7ef683b21c",
+    "rows": 418,
+    "positive_predictions": 153
+  },
+  {
+    "file": "submissions/submission_v43_ticket_p3_seedvote.csv",
+    "sha256": "490bfeda2a442b55a51feeacbbdf248860a2813a13a690bae91ff88121e110e4",
+    "rows": 418,
+    "positive_predictions": 154
+  },
+  {
+    "file": "submissions/submission_v45_v38_plus_p3_090.csv",
+    "sha256": "b7ab37103054907a4987599f59b1d27f020287e8de8257aafda9300bd9bc03be",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v46_v38_plus_wcg_female_guard.csv",
+    "sha256": "d8cbe07655a3042d482d66287cc8c0880dca0ad8d9442505086ec97afb960bec",
+    "rows": 418,
+    "positive_predictions": 144
+  },
+  {
+    "file": "submissions/submission_v47_score_0.83014.csv",
+    "sha256": "ce8e484730a667e0b5d80068cf8f1418444e0113a9af28996dd8185df60ea0e4",
+    "rows": 418,
+    "positive_predictions": 135
+  },
+  {
+    "file": "submissions/submission_v47_v38_plus_all_deotte_female_guard.csv",
+    "sha256": "ce8e484730a667e0b5d80068cf8f1418444e0113a9af28996dd8185df60ea0e4",
+    "rows": 418,
+    "positive_predictions": 135
+  },
+  {
+    "file": "submissions/submission_v4_blend_90_10.csv",
+    "sha256": "1f9fb426e44402f4b389bd1195504c02c994527f82f692596fec49c557cb0cc0",
+    "rows": 418,
+    "positive_predictions": 156
+  },
+  {
+    "file": "submissions/submission_v4_score_0.79425.csv",
+    "sha256": "1f9fb426e44402f4b389bd1195504c02c994527f82f692596fec49c557cb0cc0",
+    "rows": 418,
+    "positive_predictions": 156
+  },
+  {
+    "file": "submissions/submission_v5.csv",
+    "sha256": "c41aa896e0018a7f245d637f7bd427d3fcba9377b70e66126d4d68b0b41cfc6c",
+    "rows": 418,
+    "positive_predictions": 152
+  },
+  {
+    "file": "submissions/submission_v5_hard_vote.csv",
+    "sha256": "dd80baa8467826d37f02a50697c4db497ee218cbc487d44f91b6f852dfbeb016",
+    "rows": 418,
+    "positive_predictions": 149
+  },
+  {
+    "file": "submissions/submission_v5_robust_vote.csv",
+    "sha256": "1742d03ad7b63614bb048b7fc17a865535b35d07998730f7b1ac6f3c2d3cd686",
+    "rows": 418,
+    "positive_predictions": 147
+  },
+  {
+    "file": "submissions/submission_v5_score_0.79665.csv",
+    "sha256": "1742d03ad7b63614bb048b7fc17a865535b35d07998730f7b1ac6f3c2d3cd686",
+    "rows": 418,
+    "positive_predictions": 147
+  },
+  {
+    "file": "submissions/submission_v9_gunes_all.csv",
+    "sha256": "019fd1d4e56e3b7b8183e211b18ca9fb6ebade293cbfcb5cb192fd5b8db758c6",
+    "rows": 418,
+    "positive_predictions": 157
+  },
+  {
+    "file": "submissions/submission_v9_score_0.78229.csv",
+    "sha256": "019fd1d4e56e3b7b8183e211b18ca9fb6ebade293cbfcb5cb192fd5b8db758c6",
+    "rows": 418,
+    "positive_predictions": 157
+  }
+]

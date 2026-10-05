@@ -1,0 +1,34 @@
+{
+  "python": "3.12.6",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "torch": {
+    "available": true,
+    "version": "2.5.1+cu121",
+    "cuda_available": true,
+    "cuda_version": "12.1",
+    "gpu_name": "NVIDIA GeForce RTX 4070 Ti SUPER"
+  },
+  "ready_stage1_models": [
+    "CatBoost",
+    "LightGBM",
+    "XGBoost",
+    "HistGradientBoosting",
+    "GradientBoosting",
+    "RandomForest",
+    "ExtraTrees",
+    "AdaBoost",
+    "LogisticRegression",
+    "RBF_SVM",
+    "KNN",
+    "LDA",
+    "QDA",
+    "GaussianNB"
+  ],
+  "ready_optional_models": [
+    "TabICLv2",
+    "EBM"
+  ],
+  "missing_optional_packages": [
+    "tabpfn"
+  ]
+}

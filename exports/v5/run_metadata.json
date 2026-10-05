@@ -1,0 +1,40 @@
+{
+  "selected_models": [
+    "RuleFit",
+    "FIGS",
+    "TabM",
+    "RealMLP",
+    "TabR",
+    "FTTransformer",
+    "MLP_PLR",
+    "MLP_RTDL",
+    "ResNet_RTDL",
+    "MLP_SKL",
+    "xRFM",
+    "TabPFN_v2"
+  ],
+  "completed_models": [
+    "RuleFit",
+    "FIGS",
+    "TabM",
+    "RealMLP",
+    "TabR",
+    "FTTransformer",
+    "MLP_PLR",
+    "MLP_RTDL",
+    "ResNet_RTDL",
+    "MLP_SKL",
+    "xRFM",
+    "TabPFN_v2"
+  ],
+  "failed_models": [],
+  "random_state": 42,
+  "folds": 5,
+  "feature_profile": "v2 + fold-safe WCG",
+  "champion_reference": "v4b = 90% v1 + 10% TabICLv2",
+  "notes": [
+    "Per-model artifacts make this run resumable.",
+    "Fixed blend scans are diagnostic only.",
+    "No Kaggle submission is performed."
+  ]
+}

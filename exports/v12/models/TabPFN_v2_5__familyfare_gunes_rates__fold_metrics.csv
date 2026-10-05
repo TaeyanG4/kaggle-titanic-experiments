@@ -1,0 +1,6 @@
+model,variant,fold,accuracy,roc_auc,feature_count
+TabPFN_v2_5,familyfare_gunes_rates,0,0.8435754189944135,0.9118577075098815,51
+TabPFN_v2_5,familyfare_gunes_rates,1,0.8258426966292135,0.9039438502673797,51
+TabPFN_v2_5,familyfare_gunes_rates,2,0.8258426966292135,0.886029411764706,51
+TabPFN_v2_5,familyfare_gunes_rates,3,0.8707865168539326,0.8927807486631014,51
+TabPFN_v2_5,familyfare_gunes_rates,4,0.8651685393258427,0.9165669458848558,51

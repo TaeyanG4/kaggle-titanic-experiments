@@ -1,0 +1,7 @@
+weight_model,candidate,weighted_accuracy
+logistic,familyfare_typed22__CatBoost,0.8509023229678402
+logistic,familyfare_typed22_eb25__CatBoost,0.8496517222271284
+logistic,familyfare_eb25__CatBoost,0.8469666265068287
+lightgbm,familyfare_typed22__CatBoost,0.8474611812064328
+lightgbm,familyfare_typed22_eb25__CatBoost,0.8489581280757041
+lightgbm,familyfare_eb25__CatBoost,0.8473979992265137

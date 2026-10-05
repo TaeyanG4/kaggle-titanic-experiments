@@ -1,0 +1,63 @@
+{
+  "configs": {
+    "baseline": {
+      "iterations": 130,
+      "depth": 4,
+      "learning_rate": 0.035,
+      "l2_leaf_reg": 3.0
+    },
+    "d3_l2_3": {
+      "iterations": 180,
+      "depth": 3,
+      "learning_rate": 0.035,
+      "l2_leaf_reg": 3.0
+    },
+    "d4_l2_1": {
+      "iterations": 180,
+      "depth": 4,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 1.0
+    },
+    "d4_l2_6": {
+      "iterations": 180,
+      "depth": 4,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 6.0
+    },
+    "d5_l2_3": {
+      "iterations": 180,
+      "depth": 5,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 3.0
+    },
+    "d5_l2_6": {
+      "iterations": 180,
+      "depth": 5,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 6.0
+    },
+    "slow_d3_l2_6": {
+      "iterations": 260,
+      "depth": 3,
+      "learning_rate": 0.02,
+      "l2_leaf_reg": 6.0
+    },
+    "slow_d4_l2_10": {
+      "iterations": 260,
+      "depth": 4,
+      "learning_rate": 0.02,
+      "l2_leaf_reg": 10.0
+    }
+  },
+  "representation": "v2 one-hot + fold-safe GroupSurvival + AdultMale_v6",
+  "trusted_manifest_seed": 42,
+  "stress_manifest_seeds": [
+    123,
+    777
+  ],
+  "notes": [
+    "Small predeclared grid only; not an exhaustive HPO.",
+    "Top configs are stress-tested on alternate fold manifests.",
+    "No Kaggle submission is performed."
+  ]
+}

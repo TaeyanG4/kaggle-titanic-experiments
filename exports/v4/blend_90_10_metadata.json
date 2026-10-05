@@ -1,0 +1,36 @@
+{
+  "v1_weight": 0.9,
+  "tabicl_weight": 0.1,
+  "threshold": 0.5,
+  "oof_accuracy": 0.8496071829405163,
+  "oof_roc_auc": 0.8900393059150608,
+  "test_positive_predictions": 156,
+  "fold_metrics": [
+    {
+      "fold": 0,
+      "accuracy": 0.8603351955307262,
+      "roc_auc": 0.9081686429512517
+    },
+    {
+      "fold": 1,
+      "accuracy": 0.8426966292134831,
+      "roc_auc": 0.8826871657754012
+    },
+    {
+      "fold": 2,
+      "accuracy": 0.8370786516853933,
+      "roc_auc": 0.8753342245989304
+    },
+    {
+      "fold": 3,
+      "accuracy": 0.8539325842696629,
+      "roc_auc": 0.8852941176470589
+    },
+    {
+      "fold": 4,
+      "accuracy": 0.8539325842696629,
+      "roc_auc": 0.9143730886850152
+    }
+  ],
+  "note": "Conservative fixed blend built from saved fold-safe predictions."
+}

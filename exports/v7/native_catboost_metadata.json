@@ -1,0 +1,126 @@
+{
+  "variants": {
+    "native_core": {
+      "cats": [
+        "Sex",
+        "Embarked",
+        "Title",
+        "Deck",
+        "FamilyType",
+        "TicketPrefix"
+      ],
+      "peer_group": null
+    },
+    "native_lastname": {
+      "cats": [
+        "Sex",
+        "Embarked",
+        "Title",
+        "Deck",
+        "FamilyType",
+        "TicketPrefix",
+        "LastName"
+      ],
+      "peer_group": null
+    },
+    "native_ticket": {
+      "cats": [
+        "Sex",
+        "Embarked",
+        "Title",
+        "Deck",
+        "FamilyType",
+        "TicketPrefix",
+        "Ticket"
+      ],
+      "peer_group": null
+    },
+    "native_familyfare_key": {
+      "cats": [
+        "Sex",
+        "Embarked",
+        "Title",
+        "Deck",
+        "FamilyType",
+        "TicketPrefix",
+        "FamilyFareKey"
+      ],
+      "peer_group": null
+    },
+    "native_relational": {
+      "cats": [
+        "Sex",
+        "Embarked",
+        "Title",
+        "Deck",
+        "FamilyType",
+        "TicketPrefix",
+        "LastName",
+        "Ticket",
+        "FamilyGroup",
+        "FamilyFareKey"
+      ],
+      "peer_group": null
+    },
+    "native_relational_fftarget": {
+      "cats": [
+        "Sex",
+        "Embarked",
+        "Title",
+        "Deck",
+        "FamilyType",
+        "TicketPrefix",
+        "LastName",
+        "Ticket",
+        "FamilyGroup",
+        "FamilyFareKey"
+      ],
+      "peer_group": "FamilyFareKey"
+    },
+    "native_relational_cabin": {
+      "cats": [
+        "Sex",
+        "Embarked",
+        "Title",
+        "Deck",
+        "FamilyType",
+        "TicketPrefix",
+        "LastName",
+        "Ticket",
+        "FamilyGroup",
+        "FamilyFareKey",
+        "CabinKey"
+      ],
+      "peer_group": null
+    }
+  },
+  "numeric_features": [
+    "Pclass",
+    "Age",
+    "SibSp",
+    "Parch",
+    "Fare",
+    "LogFare",
+    "FamilySize",
+    "IsAlone",
+    "TicketFreq",
+    "FarePerPerson",
+    "LogFarePerPerson",
+    "FarePerFamily",
+    "Age_Pclass",
+    "IsChild",
+    "IsMarriedWoman",
+    "AdultMale",
+    "AgeMissing",
+    "CabinKnown",
+    "CabinCount",
+    "NameLength",
+    "GroupSurvival"
+  ],
+  "seed": 42,
+  "fold_manifest": "H:\\kaggle\\practice\\Titanic - Machine Learning from Disaster\\exports\\wcg_audit_v1\\fold_manifest_seed42.csv",
+  "notes": [
+    "All target-derived GroupSurvival and FamilyFare peer stats are fold-safe.",
+    "No Kaggle submission is performed."
+  ]
+}

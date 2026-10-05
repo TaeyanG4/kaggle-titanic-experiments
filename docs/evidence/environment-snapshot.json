@@ -1,0 +1,22 @@
+{
+  "captured_utc": "2026-10-05T04:25:08.783020+00:00",
+  "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.0.2",
+    "pandas": "2.2.2",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.9.0",
+    "matplotlib": "3.8.4",
+    "xgboost": "3.3.0",
+    "lightgbm": "4.6.0",
+    "catboost": "1.2.8",
+    "torch": "2.5.1+cu121",
+    "tabpfn": "9.1.0",
+    "tabicl": "2.2.0",
+    "pytabkit": "1.7.3",
+    "imodels": "3.0.2",
+    "networkx": "3.3",
+    "kaggle": "2.2.4"
+  },
+  "note": "Finalization-time snapshot; not proof of every historical environment. No credentials collected."
+}

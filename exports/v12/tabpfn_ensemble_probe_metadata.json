@@ -1,0 +1,108 @@
+{
+  "hard_votes": {
+    "v5_robust": [
+      "v4b",
+      "RuleFit",
+      "MLPMean"
+    ],
+    "v4b_rule_t3ff": [
+      "v4b",
+      "RuleFit",
+      "TabPFN3_FF"
+    ],
+    "v4b_mlp_t3ff": [
+      "v4b",
+      "MLPMean",
+      "TabPFN3_FF"
+    ],
+    "rule_mlp_t3ff": [
+      "RuleFit",
+      "MLPMean",
+      "TabPFN3_FF"
+    ],
+    "v4b_rule_t3ffga": [
+      "v4b",
+      "RuleFit",
+      "TabPFN3_FF_GunesAll"
+    ],
+    "v4b_mlp_t3ffga": [
+      "v4b",
+      "MLPMean",
+      "TabPFN3_FF_GunesAll"
+    ],
+    "rule_mlp_t3ffga": [
+      "RuleFit",
+      "MLPMean",
+      "TabPFN3_FF_GunesAll"
+    ],
+    "vote5_v5_t25ff_t3ff": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN25_FF",
+      "TabPFN3_FF"
+    ],
+    "vote5_v5_t3ff_t3ffga": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN3_FF",
+      "TabPFN3_FF_GunesAll"
+    ],
+    "vote5_v5_t25gr_t3ffga": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN25_GunesRates",
+      "TabPFN3_FF_GunesAll"
+    ]
+  },
+  "soft_averages": {
+    "soft4_v5_t3ff": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN3_FF"
+    ],
+    "soft4_v5_t3ffga": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN3_FF_GunesAll"
+    ],
+    "soft5_v5_t25ff_t3ff": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN25_FF",
+      "TabPFN3_FF"
+    ]
+  },
+  "stacks": {
+    "stack_v5_t25ff_t3ff": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN25_FF",
+      "TabPFN3_FF"
+    ],
+    "stack_v5_t3ff_t3ffga": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN3_FF",
+      "TabPFN3_FF_GunesAll"
+    ],
+    "stack_v5_t25ff_t3ff_t3ffga": [
+      "v4b",
+      "RuleFit",
+      "MLPMean",
+      "TabPFN25_FF",
+      "TabPFN3_FF",
+      "TabPFN3_FF_GunesAll"
+    ]
+  },
+  "stack_model": "LogisticRegression(C=0.25, L2, liblinear)",
+  "stack_validation": "cross-fitted on preserved outer folds",
+  "no_submission": true
+}

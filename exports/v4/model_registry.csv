@@ -1,0 +1,46 @@
+number,model,family,package_probe,package_available,package_version,implementation_status,note
+1,TabPFN_v3,Foundation,tabpfn,False,,optional-supported,GPU recommended; explicit v3 checkpoint
+2,TabPFN_v2_5,Foundation,tabpfn,False,,optional-supported,Older TabPFN checkpoint for diversity
+3,TabPFN_v2,Foundation,tabpfn,False,,planned,Version adapter deferred
+4,TabICLv2,Foundation,tabicl,True,2.2.0,optional-supported,In-context classifier; checkpoint download on first use
+5,TabDPT,Foundation,n/a,,,planned,Research implementation; add after Stage-1 screen
+6,TabFM,Foundation,n/a,,,planned,Research implementation; add after Stage-1 screen
+7,TabM,Modern tabular DL,tabm,False,,planned,Needs a dedicated PyTorch training loop
+8,RealMLP,Modern tabular DL,pytabkit,True,1.7.3,planned,Can be added through pytabkit
+9,ModernNCA,Modern tabular DL,n/a,,,planned,Nearest-neighbour-style neural representation
+10,TabR,Modern tabular DL,pytabkit,True,1.7.3,planned,Retrieval model; faiss dependency may be needed
+11,FTTransformer,Modern tabular DL,rtdl_revisiting_models,False,,planned,Transformer baseline
+12,SAINT,Modern tabular DL,n/a,,,planned,Transformer-style row/column attention
+13,TabTransformer,Modern tabular DL,pytorch_tabular,False,,planned,Categorical transformer
+14,MLP_PLR,Modern tabular DL,rtdl_revisiting_models,False,,planned,MLP with richer numerical embeddings
+15,ResNet,Modern tabular DL,rtdl_revisiting_models,False,,planned,Tabular residual MLP
+16,MLP,Modern tabular DL,torch,True,2.5.1+cu121,planned,Simple neural baseline
+17,CatBoost,Tree,catboost,True,1.2.8,reference-existing,Already available from v1/v2 fold-safe audit
+18,LightGBM,Tree,lightgbm,True,4.6.0,reference-existing,Already available from v1/v2 fold-safe audit
+19,XGBoost,Tree,xgboost,True,3.3.0,reference-existing,Already available from v1/v2 fold-safe audit
+20,HistGradientBoosting,Tree,sklearn,True,1.9.0,stage1-supported,New low-friction tree-family comparison
+21,GradientBoosting,Tree,sklearn,True,1.9.0,reference-existing,Already available from v1/v2 fold-safe audit
+22,RandomForest,Tree,sklearn,True,1.9.0,reference-existing,Already available from v1/v2 fold-safe audit
+23,ExtraTrees,Tree,sklearn,True,1.9.0,reference-existing,Already available from v1/v2 fold-safe audit
+24,AdaBoost,Tree,sklearn,True,1.9.0,stage1-supported,Different boosting bias
+25,LogisticRegression,Classical,sklearn,True,1.9.0,stage1-supported,Linear decision boundary; high diversity value
+26,RBF_SVM,Classical,sklearn,True,1.9.0,stage1-supported,Kernel boundary; scaled features
+27,KNN,Classical,sklearn,True,1.9.0,stage1-supported,Local-neighbour baseline
+28,LDA,Classical,sklearn,True,1.9.0,stage1-supported,Shared-covariance discriminant model
+29,QDA,Classical,sklearn,True,1.9.0,stage1-supported,Class-specific covariance
+30,GaussianNB,Classical,sklearn,True,1.9.0,stage1-supported,Strongly different independence assumptions
+31,EBM,Interpretable,interpret,True,0.7.8,optional-supported,Explainable boosting model
+32,RuleFit,Interpretable,imodels,False,,planned,Rule extraction plus linear weighting
+33,FIGS,Interpretable,imodels,False,,planned,Small jointly optimized tree set
+34,NODE,Tree/DL hybrid,n/a,,,planned,Differentiable oblivious tree ensemble
+35,GRANDE,Tree/DL hybrid,n/a,,,planned,Gradient-trained decision-tree ensemble
+36,Trompt,Modern tabular DL,n/a,,,planned,Prompt-inspired tabular model
+37,ExcelFormer,Modern tabular DL,n/a,,,planned,Transformer-style feature interaction
+38,AMFormer,Modern tabular DL,n/a,,,planned,Arithmetic interaction attention
+39,T2G_Former,Modern tabular DL,n/a,,,planned,Feature-relation graph transformer
+40,Mambular,Modern tabular DL,n/a,,,planned,State-space tabular model
+41,HyperFast,Foundation/Meta,n/a,,,planned,Hypernetwork-generated task model
+42,MotherNet,Foundation/Meta,n/a,,,planned,Meta-trained hypernetwork
+43,RFM,Kernel/Feature,n/a,,,planned,Recursive feature learning
+44,xRFM,Kernel/Feature,pytabkit,True,1.7.3,planned,Scalable RFM variant
+45,AutoGluon,AutoML,autogluon,False,,planned,Separate AutoML benchmark lane

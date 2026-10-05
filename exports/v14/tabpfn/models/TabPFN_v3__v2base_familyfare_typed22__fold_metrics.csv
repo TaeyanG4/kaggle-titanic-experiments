@@ -1,0 +1,6 @@
+model,variant,fold,accuracy,roc_auc,feature_count
+TabPFN_v3,v2base_familyfare_typed22,0,0.8435754189944135,0.9162055335968379,67
+TabPFN_v3,v2base_familyfare_typed22,1,0.8314606741573034,0.8947192513368984,67
+TabPFN_v3,v2base_familyfare_typed22,2,0.848314606741573,0.8816176470588235,67
+TabPFN_v3,v2base_familyfare_typed22,3,0.8651685393258427,0.887566844919786,67
+TabPFN_v3,v2base_familyfare_typed22,4,0.8707865168539326,0.9131764393032843,67

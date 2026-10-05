@@ -1,0 +1,56 @@
+{
+  "source": "Gunes Evitan - Titanic Advanced Feature Engineering Tutorial",
+  "source_url": "https://www.kaggle.com/code/gunesevitan/titanic-advanced-feature-engineering-tutorial",
+  "historical_reported_public_score": 0.83732,
+  "feature_count": 26,
+  "feature_names": [
+    "Age",
+    "Fare",
+    "Ticket_Frequency",
+    "Is_Married",
+    "Survival_Rate",
+    "Survival_Rate_NA",
+    "Pclass_1",
+    "Pclass_2",
+    "Pclass_3",
+    "Sex_1",
+    "Sex_2",
+    "Deck_1",
+    "Deck_2",
+    "Deck_3",
+    "Deck_4",
+    "Embarked_1",
+    "Embarked_2",
+    "Embarked_3",
+    "Title_1",
+    "Title_2",
+    "Title_3",
+    "Title_4",
+    "Family_Size_Grouped_1",
+    "Family_Size_Grouped_2",
+    "Family_Size_Grouped_3",
+    "Family_Size_Grouped_4"
+  ],
+  "model": {
+    "n_estimators": 1750,
+    "max_depth": 7,
+    "min_samples_split": 6,
+    "min_samples_leaf": 6,
+    "max_features_original": "auto",
+    "max_features_compatibility": "sqrt",
+    "random_state": 42
+  },
+  "cv": {
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 5
+  },
+  "local_oof_accuracy": 0.8361391694725028,
+  "local_oof_auc": 0.8931070846515196,
+  "average_oob_score": 0.8425961674834928,
+  "test_positive_count": 149,
+  "compatibility_notes": [
+    "Deprecated pandas syntax updated without intended semantic changes.",
+    "RandomForest max_features='auto' replaced by equivalent 'sqrt' in current sklearn."
+  ]
+}

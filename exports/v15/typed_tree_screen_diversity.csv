@@ -1,0 +1,7 @@
+variant,model,disagreement_vs_v5,v5_wrong_candidate_right,v5_right_candidate_wrong,net_unique_correct_vs_v5,test_disagreement_vs_v5
+v2base_familyfare_typed22,GradientBoosting,43,18,25,-7,17
+v2base_familyfare_typed22,CatBoost,35,17,18,-1,14
+v2base_typed22,GradientBoosting,42,16,26,-10,18
+v2base_typed22,CatBoost,35,14,21,-7,11
+v2base_familyfare_typed22,XGBoost,35,14,21,-7,19
+v2base_typed22,XGBoost,39,13,26,-13,14

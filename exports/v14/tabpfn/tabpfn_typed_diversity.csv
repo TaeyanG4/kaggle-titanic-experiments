@@ -1,0 +1,7 @@
+model,variant,binary_disagreement_vs_v5,v5_wrong_candidate_right,v5_right_candidate_wrong,net_unique_correct_vs_v5,correlation_vs_v4b,correlation_vs_rulefit
+TabPFN_v3,v2base_familyfare_typed22,40,19,21,-2,0.9797504944986383,0.9458305701453408
+TabPFN_v2_5,v2base_familyfare_typed22,36,17,19,-2,0.9780675943242443,0.9448629158567303
+TabPFN_v2_5,gunes24_typed22,38,16,22,-6,0.9692150964619077,0.9286699324875396
+TabPFN_v3,gunes24_typed22,45,16,29,-13,0.9728234021982612,0.9342037864239544
+TabPFN_v3,v2base_typed22,34,14,20,-6,0.9839309252949042,0.9491966859540916
+TabPFN_v2_5,v2base_typed22,32,12,20,-8,0.9795395485109086,0.9464873508087707

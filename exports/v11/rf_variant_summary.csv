@@ -1,0 +1,5 @@
+candidate,evaluation,accuracy,roc_auc,oob_score,test_positive_count
+single_best_full,in_sample_train_diagnostic,0.856341189674523,0.9184189222296787,0.8473625140291807,151
+single_best_cv,historical_leaky_cv,0.8428731762065096,0.8902896281383483,0.8451207116630158,147
+leaderboard_full,in_sample_train_diagnostic,0.8653198653198653,0.9280589908286199,0.8395061728395061,151
+leaderboard_cv,historical_leaky_cv,0.8361391694725028,0.8931070846515196,0.8425961674834926,149

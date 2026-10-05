@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "baseline": {
+      "age_key": null,
+      "deck_key": null
+    },
+    "age_family_ticket": {
+      "age_key": "FamilyGroup",
+      "deck_key": null
+    },
+    "age_familyfare_ticket": {
+      "age_key": "FamilyFareKey",
+      "deck_key": null
+    },
+    "deck_family_ticket": {
+      "age_key": null,
+      "deck_key": "FamilyGroup"
+    },
+    "deck_familyfare_ticket": {
+      "age_key": null,
+      "deck_key": "FamilyFareKey"
+    },
+    "relational_family_ticket": {
+      "age_key": "FamilyGroup",
+      "deck_key": "FamilyGroup"
+    },
+    "relational_familyfare_ticket": {
+      "age_key": "FamilyFareKey",
+      "deck_key": "FamilyFareKey"
+    }
+  },
+  "models": [
+    "GradientBoosting",
+    "XGBoost",
+    "CatBoost"
+  ],
+  "fold_manifest": "H:\\kaggle\\practice\\Titanic - Machine Learning from Disaster\\exports\\wcg_audit_v1\\fold_manifest_seed42.csv",
+  "notes": [
+    "Relational Age/Deck preprocessing uses only target-independent columns.",
+    "Combined train+test is used for target-independent group medians, consistent with existing project preprocessing.",
+    "GroupSurvival remains fold-safe.",
+    "No Kaggle submission is performed."
+  ]
+}

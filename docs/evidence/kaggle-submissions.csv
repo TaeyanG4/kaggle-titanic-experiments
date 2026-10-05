@@ -1,0 +1,18 @@
+ref,fileName,date,description,status,publicScore
+56824542,submission.csv,2026-10-04 13:03:19.343000,Titanic High-Performance Ensemble Pipeline (WCG+6Models),SubmissionStatus.COMPLETE,0.79186
+56825418,submission_v2.csv,2026-10-04 13:40:47.277000,Titanic v2: Advanced FE + Weighted Blending + WCG Post-Processing,SubmissionStatus.COMPLETE,0.78708
+56826952,submission_v4.csv,2026-10-04 14:53:18.353000,Titanic v4: TabICLv2 + Fold-safe WCG,SubmissionStatus.COMPLETE,0.78708
+56827009,submission_v4_blend_90_10.csv,2026-10-04 14:55:38.210000,Titanic v4b: 90% v1 + 10% TabICLv2 fold-safe blend,SubmissionStatus.COMPLETE,0.79425
+56827698,submission_v5_robust_vote.csv,2026-10-04 15:29:26.693000,v5 robust hard vote: v4b + RuleFit + 3-seed MLP-PLR,SubmissionStatus.COMPLETE,0.79665
+56829831,submission_v9_gunes_all.csv,2026-10-04 17:15:18.470000,v9 Gunes Evitan fold-safe feature transfer: gunes_all panel,SubmissionStatus.COMPLETE,0.78229
+56830042,submission_v10_gunes_original_reproduction.csv,2026-10-04 17:26:43.107000,v10 exact Gunes Evitan tutorial reproduction: 26 features + 1750-tree RF 5-fold,SubmissionStatus.COMPLETE,0.81578
+56831596,submission_v15_switch_t3_t25_cat.csv,2026-10-04 18:46:40.047000,v19 validated typed consensus: v5 robust with unanimous TabPFN v3/v2.5 + CatBoost switch,SubmissionStatus.COMPLETE,0.79425
+56831621,submission_v18_v10_guard_all3_weak.csv,2026-10-04 18:48:51.207000,v20 validated v10 conservative typed guard: unanimous t3/t25/cat switch only when relation evidence weak,SubmissionStatus.COMPLETE,0.81100
+56832161,submission_v25_final_majority.csv,2026-10-04 19:23:47,v25 final evidence-backed majority: v5 robust + exact Deotte WCG/XGB + alternate-confirmed typed RF6,SubmissionStatus.COMPLETE,0.79186
+56841525,submission_v38_v10_text_rescue.csv,2026-10-05 03:46:38.143000,v38 conservative v10 + high-confidence raw-ticket text rescue (1-row change),SubmissionStatus.COMPLETE,0.81818
+56841543,submission_v43_ticket_p3_full.csv,2026-10-05 03:47:29.890000,v43 ticket numeric P3 EB finalist: 6-seed x 5-fold mean-probability bag,SubmissionStatus.COMPLETE,0.79665
+56841584,submission_v45_v38_plus_p3_090.csv,2026-10-05 03:50:03.983000,v45 conservative champion guard: v38 + unanimous P3 >=0.90 (adds PassengerId 1122),SubmissionStatus.COMPLETE,0.81578
+56841621,submission_v21_deotte_wcg_xgb_exact_public.csv,2026-10-05 03:52:26.697000,v21 exact Deotte WCG+XGBoost historical reproduction from public notebook logic/output,SubmissionStatus.COMPLETE,0.81339
+56841650,submission_v46_v38_plus_wcg_female_guard.csv,2026-10-05 03:53:57.947000,v46 v38 champion + conservative Deotte WCG female-death guard (4 extra rows),SubmissionStatus.COMPLETE,0.82775
+56841675,submission_v47_v38_plus_all_deotte_female_guard.csv,2026-10-05 03:55:32.100000,v47 v38 champion + broader Deotte female-death guard (13 extra rows),SubmissionStatus.COMPLETE,0.83014
+56841712,submission_v21_deotte_wcg_both.csv,2026-10-05 03:57:25,"v21 Deotte WCG both deterministic rule, strongest standalone Deotte local variant",SubmissionStatus.COMPLETE,0.80382

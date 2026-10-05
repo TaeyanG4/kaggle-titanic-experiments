@@ -1,0 +1,74 @@
+{
+  "configs": {
+    "baseline": {
+      "n_estimators": 160,
+      "tree_size": 4,
+      "max_rules": 40,
+      "include_linear": true
+    },
+    "rules20": {
+      "n_estimators": 160,
+      "tree_size": 4,
+      "max_rules": 20,
+      "include_linear": true
+    },
+    "rules60": {
+      "n_estimators": 160,
+      "tree_size": 4,
+      "max_rules": 60,
+      "include_linear": true
+    },
+    "tree3": {
+      "n_estimators": 160,
+      "tree_size": 3,
+      "max_rules": 40,
+      "include_linear": true
+    },
+    "tree5": {
+      "n_estimators": 160,
+      "tree_size": 5,
+      "max_rules": 40,
+      "include_linear": true
+    },
+    "no_linear": {
+      "n_estimators": 160,
+      "tree_size": 4,
+      "max_rules": 40,
+      "include_linear": false
+    },
+    "fixed_tree_size": {
+      "n_estimators": 160,
+      "tree_size": 4,
+      "max_rules": 40,
+      "include_linear": true,
+      "exp_rand_tree_size": false
+    },
+    "trim05": {
+      "n_estimators": 160,
+      "tree_size": 4,
+      "max_rules": 40,
+      "include_linear": true,
+      "lin_trim_quantile": 0.05
+    },
+    "trees240": {
+      "n_estimators": 240,
+      "tree_size": 4,
+      "max_rules": 40,
+      "include_linear": true
+    }
+  },
+  "trusted_fold_manifest": "H:\\kaggle\\practice\\Titanic - Machine Learning from Disaster\\exports\\wcg_audit_v1\\fold_manifest_seed42.csv",
+  "v5_robust_hard_vote_accuracy_reference": 0.8540965207631874,
+  "screen_seed": 42,
+  "stability_seeds": [
+    42,
+    142,
+    242
+  ],
+  "notes": [
+    "Grid is deliberately small and predeclared.",
+    "All RuleFit predictions are OOF on the same trusted folds.",
+    "Hard-vote diagnostics use fixed v4b and MLP 3-seed-mean OOF predictions.",
+    "No Kaggle submission is performed."
+  ]
+}

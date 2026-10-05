@@ -1,0 +1,7 @@
+candidate,candidate_accuracy,champion_wrong_candidate_right,champion_right_candidate_wrong,net_vs_champion,binary_disagreement
+FamilyFareGB,0.8496071829405163,17,21,-4,38
+FamilyFarePanel,0.8462401795735129,15,22,-7,37
+TicketWCGCat,0.8462401795735129,14,21,-7,35
+FamilyFareCat,0.8451178451178452,13,21,-8,34
+CatAdultMaleTuned,0.8507295173961841,9,12,-3,21
+TabPFNv2,0.8428731762065096,8,18,-10,26

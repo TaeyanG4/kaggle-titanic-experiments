@@ -1,0 +1,4 @@
+family,mean_delta,min_delta,switches,rescue,harm,net,positive,nonnegative
+group,0.0,0.0,2,1,1,0,0,2
+pseudo,0.0011235955056179802,0.0,1,1,0,1,1,5
+repeated,0.00037411148522259463,0.0,2,2,0,2,2,6

@@ -1,0 +1,16 @@
+{
+  "version": "v5_hard_vote",
+  "members": [
+    "v4b__Champion",
+    "MLP_PLR",
+    "RuleFit"
+  ],
+  "rule": "majority of three binary predictions at threshold 0.5",
+  "oof_accuracy": 0.8552188552188552,
+  "vote_fraction_roc_auc": 0.8580406693722771,
+  "fold_accuracy_mean": 0.8552131065218755,
+  "fold_accuracy_std": 0.01487206492708001,
+  "test_positive_predictions": 149,
+  "status": "local_candidate_not_submitted",
+  "note": "No learned blend weights; low-degree-of-freedom hard vote."
+}

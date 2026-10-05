@@ -1,0 +1,49 @@
+{
+  "models": [
+    "TabPFN_v2_5",
+    "TabPFN_v3"
+  ],
+  "variants": {
+    "gunes_structural": {
+      "gunes_structural": true,
+      "gunes_rates": false,
+      "familyfare": false
+    },
+    "gunes_rates": {
+      "gunes_structural": false,
+      "gunes_rates": true,
+      "familyfare": false
+    },
+    "gunes_all": {
+      "gunes_structural": true,
+      "gunes_rates": true,
+      "familyfare": false
+    },
+    "familyfare_gunes_rates": {
+      "gunes_structural": false,
+      "gunes_rates": true,
+      "familyfare": true
+    },
+    "familyfare_gunes_all": {
+      "gunes_structural": true,
+      "gunes_rates": true,
+      "familyfare": true
+    }
+  },
+  "base_feature_count": 41,
+  "gunes_structural_columns": [
+    "AgeSexPclass_Gunes",
+    "AgeBinQ10_Gunes",
+    "FareBinQ13_Gunes",
+    "DeckGroup_Gunes_ABC",
+    "DeckGroup_Gunes_DE",
+    "DeckGroup_Gunes_FG",
+    "DeckGroup_Gunes_M",
+    "TitleGroup_Gunes_Dr/Military/Noble/Clergy",
+    "TitleGroup_Gunes_Master",
+    "TitleGroup_Gunes_Miss/Mrs/Ms",
+    "TitleGroup_Gunes_Mr"
+  ],
+  "validation": "trusted fixed five folds; all target features fold-safe",
+  "no_submission": true
+}

@@ -1,0 +1,28 @@
+{
+  "competition": "titanic",
+  "submitted_on": "2026-10-04",
+  "submissions": [
+    {
+      "version": "v4a",
+      "submission_id": 56826952,
+      "file": "submissions/submission_v4.csv",
+      "description": "Titanic v4: TabICLv2 + Fold-safe WCG",
+      "local_oof_accuracy": 0.8507295173961841,
+      "local_oof_roc_auc": 0.9008564215639281,
+      "public_score": 0.78708,
+      "status": "COMPLETE"
+    },
+    {
+      "version": "v4b",
+      "submission_id": 56827009,
+      "file": "submissions/submission_v4_blend_90_10.csv",
+      "description": "Titanic v4b: 90% v1 + 10% TabICLv2 fold-safe blend",
+      "local_oof_accuracy": 0.8496071829405163,
+      "local_oof_roc_auc": 0.8900393059150608,
+      "public_score": 0.79425,
+      "status": "COMPLETE",
+      "champion": true
+    }
+  ],
+  "remaining_daily_submissions_after_v4b": 6
+}

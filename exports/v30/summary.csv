@@ -1,0 +1,2 @@
+candidate,mean_v5_accuracy,mean_eb_accuracy,mean_delta,min_delta,max_delta,positive_seeds,nonnegative_seeds,negative_seeds,total_rescue,total_harm
+eb_cat_vs_v5,0.842199775533109,0.8496071829405164,0.0074074074074073955,-0.001122334455667784,0.013468013468013407,4,4,1,133,100

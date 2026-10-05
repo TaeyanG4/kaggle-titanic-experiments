@@ -1,0 +1,9 @@
+variant,panel_accuracy,binary_disagreement_vs_v5,v5_wrong_variant_right,v5_right_variant_wrong,net_unique_correct_vs_v5
+gunes_all,0.8473625140291807,40,17,23,-6
+gunes_survival_rate_components,0.8462401795735129,35,14,21,-7
+gunes_agefare_bins,0.8439955106621774,35,13,22,-9
+gunes_deck_group,0.8439955106621774,41,16,25,-9
+gunes_survival_rate_exact,0.8439955106621774,37,14,23,-9
+baseline,0.8428731762065096,36,13,23,-10
+gunes_structural,0.8417508417508418,37,13,24,-11
+gunes_title_group,0.8406285072951739,36,12,24,-12

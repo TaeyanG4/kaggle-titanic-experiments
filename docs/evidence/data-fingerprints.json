@@ -1,0 +1,17 @@
+[
+  {
+    "file": "train.csv",
+    "sha256": "7d118fef8b6ccf7f81111877bc388536f7b1e498a655e3d649d19aaa010e9f6f",
+    "bytes": 61194
+  },
+  {
+    "file": "test.csv",
+    "sha256": "56023b9948236f3c7a1c9448fcf418b283e109ef177fa8c7e069158dd7dd52b2",
+    "bytes": 28629
+  },
+  {
+    "file": "gender_submission.csv",
+    "sha256": "7a262a7f4cb807f53911dccc84257ed3976b21b7b50ffc468b58446bff8bb6a4",
+    "bytes": 3258
+  }
+]

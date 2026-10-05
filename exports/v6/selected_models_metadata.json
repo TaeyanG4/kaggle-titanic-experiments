@@ -1,0 +1,65 @@
+{
+  "CatBoost_v6": {
+    "base_model": "CatBoost",
+    "structural": [
+      "AdultMale_v6",
+      "FarePerFamily_v6"
+    ],
+    "wcg": [
+      "TicketWCGMean_v6",
+      "TicketWCGSmooth_v6",
+      "TicketWCGPeerCount_v6",
+      "TicketWCGHasPeers_v6",
+      "TicketWCGUnanimous_v6"
+    ]
+  },
+  "XGBoost_v6": {
+    "base_model": "XGBoost",
+    "structural": [
+      "NameLength_v6",
+      "FarePerFamily_v6"
+    ],
+    "wcg": [
+      "TicketWCGMean_v6",
+      "TicketWCGSmooth_v6",
+      "TicketWCGPeerCount_v6",
+      "TicketWCGHasPeers_v6",
+      "TicketWCGUnanimous_v6"
+    ]
+  },
+  "GradientBoosting_v6": {
+    "base_model": "GradientBoosting",
+    "structural": [
+      "AgeMissing_v6",
+      "FarePerFamily_v6"
+    ],
+    "wcg": [
+      "FamilyWCGMean_v6",
+      "FamilyWCGSmooth_v6",
+      "FamilyWCGPeerCount_v6",
+      "FamilyWCGHasPeers_v6",
+      "FamilyWCGUnanimous_v6"
+    ]
+  },
+  "RuleFit_v6": {
+    "base_model": "RuleFit",
+    "structural": [
+      "FarePerFamily_v6",
+      "AdultMale_v6",
+      "IsMother_v6",
+      "AgeMissing_v6"
+    ],
+    "wcg": []
+  },
+  "MLP_PLR_v6": {
+    "base_model": "MLP_PLR",
+    "structural": [
+      "FarePerFamily_v6",
+      "AdultMale_v6",
+      "IsMother_v6",
+      "AgeMissing_v6",
+      "CabinCount_v6"
+    ],
+    "wcg": []
+  }
+}

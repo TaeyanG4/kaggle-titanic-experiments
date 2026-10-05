@@ -1,0 +1,13 @@
+{
+  "version": "v5_robust_vote",
+  "members": [
+    "v4b__Champion",
+    "RuleFit",
+    "MLP_PLR mean probability over seeds 42/142/242"
+  ],
+  "oof_accuracy": 0.8540965207631874,
+  "vote_fraction_roc_auc": 0.853324492165447,
+  "fold_accuracy_std": 0.013364396219856925,
+  "test_positive_predictions": 147,
+  "status": "local_candidate_not_submitted"
+}

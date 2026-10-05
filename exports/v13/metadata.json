@@ -1,0 +1,21 @@
+{
+  "mechanism": "fold-safe transductive Family/Ticket group eligibility",
+  "trusted_folds": "H:\\kaggle\\practice\\Titanic - Machine Learning from Disaster\\exports\\wcg_audit_v1\\fold_manifest_seed42.csv",
+  "rf_config": {
+    "n_estimators": 1750,
+    "max_depth": 7,
+    "min_samples_split": 6,
+    "min_samples_leaf": 6
+  },
+  "selector_rules": [
+    "majority_v5_trans_tab",
+    "prefer_trans_any_group",
+    "prefer_trans_both_groups",
+    "prefer_trans_extreme_group",
+    "prefer_trans_group_tab_agree",
+    "prefer_trans_both_group_tab_agree",
+    "prefer_trans_extreme_tab_agree"
+  ],
+  "test_candidate_mapping": "OOF transductive RF analogue -> actual v10 test prediction",
+  "no_submission": true
+}

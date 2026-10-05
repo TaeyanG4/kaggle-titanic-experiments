@@ -1,0 +1,9 @@
+* text=auto eol=lf
+# Historical fingerprints and submission bytes must remain unchanged.
+scripts/** -text
+exports/** -text
+submissions/** -text
+notebooks/** -text
+archive/legacy-2023/** -text
+*.png binary
+*.pkl binary

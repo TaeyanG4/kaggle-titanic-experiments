@@ -1,0 +1,2 @@
+n_train,n_repeated_surfaces,stable_hard_n,stable_hard_rate,stable_easy_n,ambiguous_n,all3_family_hard_n,mean_family_disagreement_rate,mean_model_seed_variance
+891,5,121,0.13580246913580246,730,40,99,0.09180695847362515,0.014635241301907971

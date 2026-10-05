@@ -1,0 +1,10 @@
+# Finalization-time core environment, not a complete historical lockfile.
+# Optional neural/prior-data models have separate requirements; see docs.
+numpy==2.0.2
+pandas==2.2.2
+scipy==1.13.1
+scikit-learn==1.9.0
+xgboost==3.3.0
+lightgbm==4.6.0
+catboost==1.2.8
+networkx==3.3

@@ -1,0 +1,2 @@
+PassengerId,v10,name_only_prob,name_only_pred,name_only_conf,name_only_switch,ticket_only_prob,ticket_only_pred,ticket_only_conf,ticket_only_switch,cabin_only_prob,cabin_only_pred,cabin_only_conf,cabin_only_switch,name_ticket_prob,name_ticket_pred,name_ticket_conf,name_ticket_switch,full_text_prob,full_text_pred,full_text_conf,full_text_switch
+980,1,0.3411110053080732,0,0.6588889946919267,0,0.22395327092028114,0,0.7760467290797188,1,0.30167574976509554,0,0.6983242502349045,0,0.233135773607935,0,0.766864226392065,1,0.24467743276404377,0,0.7553225672359563,1

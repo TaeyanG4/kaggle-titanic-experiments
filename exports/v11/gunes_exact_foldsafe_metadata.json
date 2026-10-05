@@ -1,0 +1,21 @@
+{
+  "base_feature_count": 24,
+  "final_feature_count": 26,
+  "rf_configs": {
+    "single_best": {
+      "n_estimators": 1100,
+      "max_depth": 5,
+      "min_samples_split": 4,
+      "min_samples_leaf": 5
+    },
+    "leaderboard": {
+      "n_estimators": 1750,
+      "max_depth": 7,
+      "min_samples_split": 6,
+      "min_samples_leaf": 6
+    }
+  },
+  "target_encoding": "fold-safe peer median; train self-excluded",
+  "historical_test_group_eligibility_retained": true,
+  "no_submission": true
+}

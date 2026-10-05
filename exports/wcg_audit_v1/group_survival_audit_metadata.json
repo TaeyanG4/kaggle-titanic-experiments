@@ -1,0 +1,57 @@
+{
+  "n_splits": 5,
+  "random_state": 42,
+  "models": [
+    "RandomForest",
+    "ExtraTrees",
+    "GradientBoosting",
+    "XGBoost",
+    "LightGBM",
+    "CatBoost"
+  ],
+  "profile": "v1",
+  "ensemble_weights": {
+    "RandomForest": 0.16666666666666666,
+    "ExtraTrees": 0.16666666666666666,
+    "GradientBoosting": 0.16666666666666666,
+    "XGBoost": 0.16666666666666666,
+    "LightGBM": 0.16666666666666666,
+    "CatBoost": 0.16666666666666666
+  },
+  "variants": [
+    "no_wcg",
+    "global_loo",
+    "fold_safe"
+  ],
+  "model_feature_count": 26,
+  "model_features": [
+    "Pclass",
+    "Age",
+    "SibSp",
+    "Parch",
+    "FamilySize",
+    "IsAlone",
+    "LogFare",
+    "TicketFreq",
+    "IsWomanOrChild",
+    "GroupSurvival",
+    "Sex_male",
+    "Embarked_Q",
+    "Embarked_S",
+    "Title_Miss",
+    "Title_Mr",
+    "Title_Mrs",
+    "Title_Officer",
+    "Title_Royalty",
+    "Deck_B",
+    "Deck_C",
+    "Deck_D",
+    "Deck_E",
+    "Deck_F",
+    "Deck_G",
+    "Deck_T",
+    "Deck_U"
+  ],
+  "elapsed_seconds": 10.776,
+  "note": "global_loo is diagnostic only and leakage-prone across CV folds"
+}

@@ -1,0 +1,3 @@
+candidate,reference,different_predictions,same_predictions,v3_positive_count,reference_positive_count
+v3_fold_safe,v1,6,412,155,157
+v3_fold_safe,v2,2,416,155,155

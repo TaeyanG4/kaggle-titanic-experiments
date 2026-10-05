@@ -1,0 +1,16 @@
+variant,family,switches,rescue,harm,net,positive_surfaces,negative_surfaces,switch_precision
+cabin_only,group,34,20,14,6,2,0,0.5882352941176471
+cabin_only,pseudo,21,12,9,3,4,1,0.5714285714285714
+cabin_only,repeated,134,72,62,10,3,3,0.5373134328358209
+full_text,group,2,1,1,0,0,0,0.5
+full_text,pseudo,1,1,0,1,1,0,1.0
+full_text,repeated,2,2,0,2,2,0,1.0
+name_only,group,20,2,18,-16,0,2,0.1
+name_only,pseudo,2,1,1,0,1,1,0.5
+name_only,repeated,19,11,8,3,3,2,0.5789473684210527
+name_ticket,group,4,2,2,0,0,0,0.5
+name_ticket,pseudo,1,1,0,1,1,0,1.0
+name_ticket,repeated,3,3,0,3,2,0,1.0
+ticket_only,group,102,46,56,-10,0,2,0.45098039215686275
+ticket_only,pseudo,50,27,23,4,3,1,0.54
+ticket_only,repeated,315,148,167,-19,3,3,0.46984126984126984
