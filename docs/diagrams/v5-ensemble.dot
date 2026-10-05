@@ -1,0 +1,21 @@
+digraph v5 {
+  graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.32", ranksep="0.5", fontname="Arial", label="v5: a three-member vote with nested ensembles", labelloc="t", labeljust="l", fontsize=23, fontcolor="#16324a", splines=polyline];
+  node [shape=box, style="rounded,filled", fillcolor="#f3f7fa", color="#bdcbd5", fontname="Arial", fontsize=16, fontcolor="#16324a", margin="0.26,0.16", penwidth=1.2];
+  edge [color="#687c89", arrowsize=0.8, penwidth=1.3, fontname="Arial", fontsize=13, fontcolor="#465c6b"];
+  trees [label="v1: six tree models\nRF / ET / GB / XGB / LGBM / CatBoost\nAverage survival probability"];
+  tabicl [label="TabICLv2\nSurvival probability"];
+  v4b [label="Member 1: v4b\n0.90 x tree mean + 0.10 x TabICL", fillcolor="#e4f3ef", color="#82b5a7"];
+  rule [label="Member 2: RuleFit\nSurvival probability"];
+  mlp [label="Member 3: MLP-PLR\nMean probability over seeds\n42 / 142 / 242"];
+  threshold [label="Convert each member to a label\nSurvival probability > 0.5"];
+  vote [label="At least two survival votes?\nYes: 1     No: 0", fillcolor="#e4f3ef", color="#82b5a7"];
+  score [shape=plain, label="Recorded fixed OOF: 0.85410\nSubmitted Public: 0.79665", fontcolor="#465c6b", fontsize=15];
+  {rank=same; trees; tabicl;}
+  {rank=same; v4b; rule; mlp;}
+  trees -> v4b [label="90%"];
+  tabicl -> v4b [label="10%"];
+  v4b -> threshold;
+  rule -> threshold;
+  mlp -> threshold;
+  threshold -> vote -> score;
+}

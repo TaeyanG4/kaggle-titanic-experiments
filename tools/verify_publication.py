@@ -5,7 +5,9 @@ import csv
 import hashlib
 import json
 import re
+import struct
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote
 from replay_final_artifact import replay, EXPECTED
@@ -17,6 +19,61 @@ REPO_URL = f'https://github.com/TaeyanG4/{REPO_SLUG}'
 
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+class ImageLinks(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.images: list[tuple[str, str]] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag != 'img':
+            return
+        attributes = dict(attrs)
+        self.images.append((attributes.get('src') or '', attributes.get('alt') or ''))
+
+def verify_diagrams(errors: list[str]) -> int:
+    path = ROOT/'docs/diagrams/manifest.json'
+    if not path.is_file():
+        errors.append('Missing diagram manifest.')
+        return 0
+    try:
+        manifest = json.loads(path.read_text(encoding='utf-8'))
+        diagrams = manifest['diagrams']
+        names = {item['name'] for item in diagrams}
+        expected = {'workflow', 'v5-ensemble', 'validation-boundary', 'final-lineage'}
+        if names != expected or len(diagrams) != len(expected):
+            errors.append('Unexpected diagram list.')
+        for item in diagrams:
+            source = ROOT/item['source']
+            if not source.is_file() or digest(source) != item['source_sha256']:
+                errors.append(f'Diagram source changed: {item["name"]}')
+            extensions = set()
+            for entry in item['files']:
+                image = ROOT/entry['path']
+                extensions.add(image.suffix)
+                if not image.is_file() or digest(image) != entry['sha256']:
+                    errors.append(f'Diagram image missing or changed: {entry["path"]}')
+                    continue
+                if image.suffix == '.png':
+                    data = image.read_bytes()
+                    if len(data) < 24 or data[:8] != b'\x89PNG\r\n\x1a\n':
+                        errors.append(f'Invalid PNG: {image.name}')
+                    else:
+                        dimensions = struct.unpack('>II', data[16:24])
+                        if dimensions != (item['width'], item['height']):
+                            errors.append(f'PNG dimensions do not match: {image.name}')
+                elif image.suffix == '.svg':
+                    svg = ET.parse(image).getroot()
+                    if svg.tag != '{http://www.w3.org/2000/svg}svg':
+                        errors.append(f'Invalid SVG root: {image.name}')
+                    if svg.find('.//{http://www.w3.org/2000/svg}script') is not None:
+                        errors.append(f'Script found in diagram SVG: {image.name}')
+            if extensions != {'.png', '.svg'}:
+                errors.append(f'Diagram requires PNG and SVG: {item["name"]}')
+        return len(diagrams)
+    except (ValueError, KeyError, OSError, ET.ParseError) as exc:
+        errors.append(f'Diagram verification failed: {exc}')
+        return 0
 
 def main() -> None:
     errors: list[str] = []
@@ -57,10 +114,10 @@ def main() -> None:
                 errors.append(f'Notebook outputs/execution state retained: {path.name}')
                 break
 
-    docs = list(ROOT.glob('*.md')) + list((ROOT/'docs').glob('*.md'))
+    docs = list(ROOT.glob('*.md')) + list((ROOT/'docs').rglob('*.md'))
     docs += [ROOT/'data/README.md', ROOT/'exports/README.md', ROOT/'submissions/README.md', ROOT/'notebooks/README.md', ROOT/'archive/README.md']
-    # Current entry points must use the final name. Plain historical names in
-    # the changelog and archived notes remain valid provenance, not live URLs.
+    # Active documentation uses the current project name. Archived experiment
+    # notes are not rewritten by documentation maintenance.
     for relative in ['README.md', 'README.en.md']:
         text = (ROOT/relative).read_text(encoding='utf-8')
         if not text.startswith(f'# {PROJECT_TITLE}\n'):
@@ -80,6 +137,14 @@ def main() -> None:
     links = 0
     for path in docs:
         text = path.read_text(encoding='utf-8')
+        prose = re.sub(r'```[^\n]*\n.*?```', '', text, flags=re.DOTALL)
+        unwanted = ['**', '\u201c', '\u201d', '\u00b7', '\uc18c\uc720\uc790',
+                    'According to the owner', "according to the owner's account",
+                    'as described by the owner', 'Kaggle_Titanic_practice', 'titanic-gpt-web-experiment']
+        if any(token in prose for token in unwanted):
+            errors.append(f'Unwanted editorial wording or formatting in {path.relative_to(ROOT)}')
+        if re.search(r'^\s*```mermaid\b', text, flags=re.MULTILINE):
+            errors.append(f'Use a committed flowchart image in {path.relative_to(ROOT)}')
         if previous_url.search(text):
             errors.append(f'Outdated repository URL in {path.relative_to(ROOT)}')
         for target in re.findall(r'!?\[[^\]]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)',text):
@@ -89,13 +154,26 @@ def main() -> None:
             links += 1
             if not (path.parent/target).resolve().exists():
                 errors.append(f'Broken local link in {path.relative_to(ROOT)}: {target}')
+        parser = ImageLinks()
+        parser.feed(text)
+        for source, alt in parser.images:
+            if not source or not alt.strip():
+                errors.append(f'HTML image needs src and alt in {path.relative_to(ROOT)}')
+                continue
+            if source.startswith(('https://', 'http://')):
+                continue
+            links += 1
+            if not (path.parent/unquote(source)).resolve().is_file():
+                errors.append(f'Broken HTML image in {path.relative_to(ROOT)}: {source}')
+
+    diagrams = verify_diagrams(errors)
 
     # A narrow, explicit scan is helpful but cannot prove the absence of secrets.
     patterns = [re.compile(r'gh[pousr]_[A-Za-z0-9]{36,}'), re.compile(r'github_pat_[A-Za-z0-9_]{50,}'),
                 re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----')]
     scanned = 0
     for path in ROOT.rglob('*'):
-        if not path.is_file() or '.git' in path.parts: continue
+        if not path.is_file() or any(part in {'.git', 'node_modules', '.venv', '__pycache__'} for part in path.parts): continue
         if path.name in {'kaggle.json','.env','access_token'}:
             errors.append(f'Forbidden credential file: {path.relative_to(ROOT)}')
         if path.suffix.lower() not in {'.py','.md','.json','.ipynb','.yml','.yaml','.txt'}: continue
@@ -115,6 +193,7 @@ def main() -> None:
     print(f'PASS: {len(manifests)} submission artifacts, {len(inventory)} snapshot files, {len(receipts)} campaign receipts.')
     print(f'PASS: frozen v47 replay, notebook output policy, {links} local links, {scanned} text-file credential scans.')
     print(f'PASS: project titles, cover and current repository URLs use {REPO_SLUG}.')
+    print(f'PASS: {diagrams} diagram sources with PNG/SVG hashes, HTML images and active-document style checks.')
     print('Scope: artifact/document checks only; not statistical significance, code safety or leakage certification.')
 
 if __name__=='__main__': main()

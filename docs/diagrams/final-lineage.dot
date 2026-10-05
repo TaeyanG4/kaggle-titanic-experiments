@@ -1,0 +1,21 @@
+digraph final {
+  graph [rankdir=TB, bgcolor="white", pad="0.32", nodesep="0.55", ranksep="0.45", fontname="Arial", label="Final submission construction", labelloc="t", labeljust="l", fontsize=24, fontcolor="#16324a", splines=polyline];
+  node [shape=box, style="rounded,filled", fillcolor="#f3f7fa", color="#bdcbd5", fontname="Arial", fontsize=16, fontcolor="#16324a", margin="0.26,0.16", penwidth=1.2];
+  edge [color="#687c89", arrowsize=0.8, penwidth=1.3, fontname="Arial", fontsize=12, fontcolor="#465c6b"];
+  rf [label="v10: Gunes-style RandomForest\nFive-fold probability average\nPublic 0.81578"];
+  text [label="Raw-string text model\nConfidence gate >= 0.75"];
+  v38 [label="v38: baseline plus text correction\n1 changed prediction vs v10\nPublic 0.81818", fillcolor="#e4f3ef", color="#82b5a7"];
+  narrow [label="Narrow WCG female-death guard\n4 additional changes vs v38"];
+  broad [label="Broader Deotte female-death guard\n13 additional changes vs v38\nIncludes reused public predictions", fillcolor="#fff5e7", color="#d2b587"];
+  v46 [label="v46\nPublic 0.82775"];
+  v47 [label="v47: selected submission\nPublic 0.83014", fillcolor="#e4f3ef", color="#82b5a7"];
+  note [shape=plain, label="v46 and v47 both start from v38.\nThe dashed line represents score-based selection, not extra input rows.", fontsize=14, fontcolor="#465c6b"];
+  {rank=same; rf; text;}
+  {rank=same; narrow; broad;}
+  {rank=same; v46; v47;}
+  rf -> v38; text -> v38;
+  v38 -> narrow -> v46;
+  v38 -> broad -> v47;
+  v46 -> v47 [style=dashed, label="result informed selection", constraint=false];
+  v46 -> note [style=invis]; v47 -> note [style=invis];
+}

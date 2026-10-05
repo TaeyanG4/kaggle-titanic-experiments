@@ -1,43 +1,76 @@
 # Kaggle Titanic Experiments
 
-**Titanic — Machine Learning from Disaster**
+Titanic - Machine Learning from Disaster
 
-A documented semi-automated experiment in feature engineering, ensembles, validation and failure analysis.
+![Kaggle Titanic Experiments](docs/assets/hero.svg)
 
-[한국어](README.md) · [Experiment journey](docs/02-experiment-journey.md) · [Integrity statement](docs/03-validation-and-integrity.md) · [Reproduction](docs/05-reproduction.md)
+[한국어](README.md) / [Experiment log](docs/02-experiment-journey.md) / [Validation](docs/03-validation-and-integrity.md) / [Reproduction](docs/05-reproduction.md)
 
-![Kaggle Titanic Experiments: competition experiments and the recorded Public best](docs/assets/hero.svg)
+## About the experiment
 
-## Purpose, not just a score
+I started this project to see how far custom skills and prompts could take a semi-automated machine-learning workflow. The task was Kaggle Titanic: build features, compare models, inspect failures and decide which predictions to submit.
 
-The research question is **how far a human-guided GPT web session can take the Titanic experiment using owner-configured skills and prompts**. The repository name identifies the competition and its experiment record; the execution tools and human roles are described separately below.
+Antigravity handled the initial environment setup. Subsequent planning, coding, execution requests, analysis and documentation were done through a GPT web session connected to local Python tools. I set the direction, questioned the results and approved submissions. This was a guided workflow, not a fully autonomous benchmark.
 
-This is an observational case study of semi-automated data-science work on Kaggle Titanic. According to the owner, Antigravity was used for initial setup; subsequent experimentation was directed through a GPT web session using owner-configured skills and prompts. The human supplied goals, challenged explanations, requested further investigation and authorized submissions. Connected local tools executed Python and managed files. This was not a fully autonomous agent benchmark, nor a controlled comparison against manual work or a no-skills baseline.
+The first submission scored 0.79186. The selected final artifact, v47, scored 0.83014. This repository includes the failed submissions and rejected experiments as well as the improvements.
 
-The intended constraint was to improve without cheating, answer lookup or deliberate leakage. **The final audit does not support an unqualified claim that every historical branch, or the final best Public artifact, is leakage-free.** Some branches built target-derived features before CV; others reused passenger-level predictions from a public notebook. Later candidate selection also used leaderboard feedback. Those facts are disclosed rather than hidden. They do not establish a competition-rule violation by themselves, but they limit what the result proves.
+## Recorded results
 
-## Recorded outcomes
+| Item | Result |
+|---|---|
+| First submission | v1, Public 0.79186 |
+| Best submission | v47, Public 0.83014 |
+| Displayed-score increase | 0.03828, about 3.83 percentage points |
+| v5 reference ensemble | OOF 0.85410, Public 0.79665 |
+| P3 bagged candidate | Reported OOF 0.85971, submitted Public 0.79665 |
+| Actual submissions | 17, October 4-5, 2026 UTC |
+| Final submission ID | 56841675 |
 
-| Evidence | Result | Interpretation |
-|---|---:|---|
-| First submission in this 2026 campaign | 0.79186 | v1 |
-| Best recorded Public submission | **0.83014** | v47, submission **56841675** |
-| Displayed-score improvement | **+0.03828** | Approximately 3.83 percentage points |
-| Retained v5 benchmark | OOF 0.85410; Public 0.79665 | Historically audited group-target boundary; not a blanket certificate |
-| P3 bagged research candidate | Reported OOF 0.85971; submitted Public 0.79665 | Local improvement did not transfer |
-| Actual campaign submissions | **17** | October 4–5, 2026 UTC; older practice excluded |
+Sources are the [submission receipts](docs/evidence/kaggle-submissions.csv), [evaluation exports](exports/v44/summary.csv) and [artifact hashes](docs/evidence/submission-manifest.json). The v1-v47 labels identify work stages, not 47 independent experiments.
 
-Source: [read-only Kaggle receipts](docs/evidence/kaggle-submissions.csv), [submission hashes](docs/evidence/submission-manifest.json), and retained experiment exports. Version labels v1–v47 are identifiers, not 47 equal or independent trials. No live rank or percentile is claimed.
+![Every submission and the best score so far](docs/assets/submission-history.png)
 
-![All submissions, including regressions, and best-so-far](docs/assets/submission-history.png)
+The goal was to improve without answer lookup or data leakage. Some historical reproduction branches nevertheless calculated target-derived features before CV, reused public notebook predictions or used leaderboard feedback in later selection. The final Public score should not be read as an independently verified leakage-free generalization result. These limitations are documented in the [validation report](docs/03-validation-and-integrity.md).
 
-## What was tried
+## Workflow
 
-The campaign progressed from tree ensembles and fold-aware family/ticket features through TabICL, RuleFit, MLP, TabPFN, blending and stacking. It then tested public-feature recipes, typed relational rates, matched pseudo-tests, group-held-out validation, small hyperparameter searches, adversarial validation, empirical-Bayes shrinkage, nested selection, raw character n-grams, graph centrality and numeric ticket-prefix features. Both successful and unsuccessful branches are retained.
+<p align="center">
+  <img src="docs/assets/workflow.png" width="660" alt="Initial setup and human direction feed a GPT web session, local execution, evaluation, approved submission and experiment records">
+</p>
 
-The final Public artifact combines a historical Gunes-style RF prediction with a text-based correction and a broader Deotte-derived female-death guard. It is **a leaderboard-selected historical artifact**, not an independently evaluated end-to-end model with a certified OOF score. The detailed Korean reports explain the underlying techniques and evidence boundaries.
+[Diagram source](docs/diagrams/workflow.dot) / [Larger image](docs/assets/workflow.svg)
 
-## Verify without training or credentials
+Skills defined the order of checks and the records to keep. The prompts did not serve as model input features. The session wrote and ran Python experiments, while I reviewed the direction and decided when to continue or submit.
+
+## What changed
+
+### Baseline and validation boundaries
+
+The first model averaged six tree-model probabilities. Features included title, family size and ticket frequency. v2 added fare per ticket holder and further interactions, but its Public score fell to 0.78708. Group-survival features then received a separate audit: validation labels needed to stay out of the group statistics used to predict that fold.
+
+### Diverse models and a stable ensemble
+
+v4b blended the tree average with TabICLv2 at 90:10 and scored 0.79425. v5 used a majority vote across v4b, RuleFit and a three-seed MLP-PLR average, reaching 0.79665. Logistic stacking was also tested, but a higher AUC did not consistently produce higher classification accuracy in those comparisons.
+
+### Public recipes and relational features
+
+The Gunes-style v10 reproduction used age/fare quantile bins, grouped decks and family/ticket target statistics. It scored 0.81578, but its original CV reused statistics built from all training labels. Later branches compared fold-aware encodings, role-specific rates, empirical-Bayes shrinkage and Deotte WCG rules rather than treating that CV score as a clean baseline.
+
+### Error analysis and new representations
+
+Repeated errors led to a character n-gram model of Name, Ticket and Cabin. It was weak on its own but supplied some different predictions. Graph centrality did not help the recorded accuracy comparisons. Numeric three-digit ticket prefixes were more promising locally: the P3 bag reached reported OOF 0.85971, yet its submitted Public score was 0.79665.
+
+### Final submitted combination
+
+The final branch preserved v10 and applied selected corrections instead of replacing every prediction. A high-confidence text correction produced v38 at 0.81818. Adding the narrow WCG female-death guard produced v46 at 0.82775. The broader Deotte-derived guard produced v47 at 0.83014.
+
+![The frozen v10, v38, v46 and v47 prediction lineage](docs/assets/final-lineage.png)
+
+[Diagram source](docs/diagrams/final-lineage.dot) / [Larger image](docs/assets/final-lineage.svg)
+
+Both v46 and v47 start from v38. The 13 changes in the broader guard include the four in the narrow guard. Public feedback informed the selection, and the broader guard includes reused public predictions. There is no independently evaluated OOF score for the final v47 artifact.
+
+## Reproduction
 
 ```bash
 git clone https://github.com/TaeyanG4/kaggle-titanic-experiments.git
@@ -46,16 +79,12 @@ python tools/verify_publication.py
 python tools/replay_final_artifact.py --output replayed_v47.csv
 ```
 
-The replay reconstructs the frozen submission from archived predictions. It does not retrain the models. See [reproduction](docs/05-reproduction.md) for data acquisition, optional dependencies and limitations.
+These commands check the frozen files and reconstruct the final prediction CSV. They do not retrain models or submit to Kaggle. Training requirements and limitations are described in [reproduction](docs/05-reproduction.md).
 
-## Reading map
+## Further reading
 
-The [design](docs/01-experiment-design.md), [journey](docs/02-experiment-journey.md), [validation audit](docs/03-validation-and-integrity.md), [workflow and prompts](docs/04-workflow-and-prompts.md), [reproduction](docs/05-reproduction.md), [lessons](docs/06-results-and-lessons.md), and [references](docs/07-references.md) form the final report. Earlier session notes remain in `archive/session-notes/`; original 2023 work is separated in `archive/legacy-2023/` without rewriting Git history.
+The Korean reports cover the [design](docs/01-experiment-design.md), [step-by-step changes](docs/02-experiment-journey.md), [validation](docs/03-validation-and-integrity.md), [skills and prompts](docs/04-workflow-and-prompts.md), [lessons](docs/06-results-and-lessons.md) and [sources](docs/07-references.md). Earlier working notes remain in `archive/`.
 
-Raw competition files, credentials, checkpoints and downloaded third-party notebooks are not included in the new campaign snapshot. Notebook outputs have been stripped. Derived OOF tables may contain official training labels; submission `Survived` columns are predictions, **not hidden test answers**. Existing historical source is preserved for audit and may contain defects: it is not a production library.
+No raw competition CSVs, credentials or model checkpoints are included in the new experiment snapshot. Submission labels are predictions, not hidden test answers. No no-skills control or sealed final holdout was used, so the score increase cannot be attributed to skills alone.
 
-**Conclusion:** the session produced a substantial, inspectable experiment record and a higher observed Public score. It did not prove that custom skills caused the improvement, eliminate validation-selection bias, or establish leakage-free generalization at 83.014%. There is no no-skills control, no sealed final holdout, and no verified complete model/prompt provenance.
-
-Campaign closed. No scheduled training or submission automation is enabled. See [NOTICE](NOTICE.md) before reusing third-party-derived material.
-
-Repository naming history: `Kaggle_Titanic_practice` → `titanic-gpt-web-experiment` → **`kaggle-titanic-experiments`**. Git history and experiment evidence are retained.
+The experiment is closed. There is no scheduled training or submission process. See [NOTICE](NOTICE.md) for reuse information.

@@ -1,17 +1,19 @@
-# Kaggle Titanic Experiments — Final handoff
+# Final handoff
 
-Repository: `TaeyanG4/kaggle-titanic-experiments`. Competition: **Titanic — Machine Learning from Disaster**. Previous names: `Kaggle_Titanic_practice`, then `titanic-gpt-web-experiment`. Original Git history is retained.
+Repository: `TaeyanG4/kaggle-titanic-experiments`.
 
-Use the competition-centered project title in headers and links. Preserve the Antigravity setup and GPT web-session execution details as methodology, not as part of the repository name.
+Read [README](README.md), [validation](docs/03-validation-and-integrity.md), and [reproduction](docs/05-reproduction.md) before changing the experiment record. The [step-by-step log](docs/02-experiment-journey.md) links to the implementation and results for each stage.
 
-Start with [README](README.md), [integrity](docs/03-validation-and-integrity.md), and [reproduction](docs/05-reproduction.md). Historical working notes are in [archive/session-notes](archive/session-notes/).
+The selected Public artifact is `submissions/submission_v47_score_0.83014.csv`, also preserved as `submissions/submission.csv`. Its SHA-256 is:
 
-Frozen Public artifact: `submissions/submission_v47_score_0.83014.csv`; active alias `submissions/submission.csv`; both SHA-256:
+```text
+ce8e484730a667e0b5d80068cf8f1418444e0113a9af28996dd8185df60ea0e4
+```
 
-`ce8e484730a667e0b5d80068cf8f1418444e0113a9af28996dd8185df60ea0e4`
+v5 OOF 0.85410, P3 bagged OOF 0.85971 and v47 Public 0.83014 are different evaluations. v47 includes public prediction reuse and leaderboard-adaptive selection. It has no independently evaluated OOF score.
 
-Do not conflate v5's historical OOF 0.85410, P3's reported bagged OOF 0.85971 and v47's Public 0.83014. They are different evaluations. The v47 lineage reuses public predictions and was selected adaptively from Public scores. No sealed final holdout was available.
+Run `python tools/verify_publication.py` to check the frozen files and documentation. Run `python tools/replay_final_artifact.py --output replayed_v47.csv` to reconstruct the final CSV from its stored parents. Neither command trains models or submits to Kaggle.
 
-Run `python tools/verify_publication.py` for artifact/document checks. Run `python tools/replay_final_artifact.py --output replayed_v47.csv` for frozen-file reconstruction, not model retraining. Never infer hidden labels from the submission artifacts and call them training truth.
+The flowchart sources are in `docs/diagrams/`; the renderer is in `tools/diagram-renderer/`. Preserve image and source hashes when editing them. Do not change historical scripts and attribute their old scores to the changed code.
 
-No active experiment or scheduled submission is part of the final repository. Credentials and model caches remain outside it.
+The experiment is closed. Credentials and model caches remain outside the repository.

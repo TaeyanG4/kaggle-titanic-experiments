@@ -1,46 +1,57 @@
-# 07. 참고 자료와 출처
+# 07. 참고 자료
 
-[프로젝트 홈](../README.md) · [NOTICE](../NOTICE.md)
+[프로젝트 홈](../README.md) / [재사용 안내](../NOTICE.md)
 
-## 1. 프로젝트 1차 근거
+## 실험 기록
 
-| 자료 | 역할 |
+| 자료 | 내용 |
 |---|---|
-| [Kaggle submission receipts](evidence/kaggle-submissions.csv) | 실제 제출 ID·시각·표시 점수; 종료 때 read-only 조회 |
-| [Submission manifest](evidence/submission-manifest.json) | 보존된 예측 CSV의 SHA-256·행 수·양성 예측 수 |
-| [Source inventory](evidence/source-inventory.json) | 당시 코드와 가벼운 파생 자료의 지문 |
-| [Data fingerprints](evidence/data-fingerprints.json) | 원본 파일 확인용; 데이터 자체는 미포함 |
-| [Environment snapshot](evidence/environment-snapshot.json) | 종료 시점 패키지 버전; 과거 모든 실행의 lockfile 아님 |
-| [Archived session notes](../archive/session-notes/) | 당시 plan·설명·실패 해석; 과도한 주장은 최종 감사에서 정정 |
+| [Kaggle 제출 기록](evidence/kaggle-submissions.csv) | 실제 제출 ID, 시각과 Public 점수 |
+| [제출 파일 목록](evidence/submission-manifest.json) | 예측 CSV의 해시, 행 수와 양성 예측 수 |
+| [소스 목록](evidence/source-inventory.json) | 보존한 코드와 파생 자료의 지문 |
+| [데이터 지문](evidence/data-fingerprints.json) | 원본 파일 확인용 해시 |
+| [환경 스냅샷](evidence/environment-snapshot.json) | 종료 시점 라이브러리 버전 |
+| [작업 노트](../archive/session-notes/) | 당시 계획과 결과 해석 |
 
-## 2. 공개 아이디어·원저자
+## 공개 방법
 
-**Gunes Evitan — Titanic: Advanced Feature Engineering Tutorial.** 분위수 구간, Deck 통합, 가족·티켓 통계 등의 아이디어와 역사적 재현의 출처입니다. 이 프로젝트는 그 방식의 성능을 새로운 독립 결과로 재귀속하지 않습니다.
+### Gunes Evitan의 Advanced Feature Engineering Tutorial
 
-https://www.kaggle.com/code/gunesevitan/titanic-advanced-feature-engineering-tutorial
+분위수 구간화, Deck 통합, 가족과 티켓 통계의 출처다. v10은 이 방법의 역사적 동작을 재현했고, 다른 분기에서는 피처를 fold별로 재작성해 비교했다.
 
-**Chris Deotte — Titanic WCG+XGBoost.** 정교한 WCG와 역할별 규칙의 출처입니다. Python 근사와 공개 실행 출력에서 복구한 test 예측 목록이 함께 존재합니다. 공개 목록의 재사용은 자체 학습과 분리하여 설명합니다.
+[원본 노트북](https://www.kaggle.com/code/gunesevitan/titanic-advanced-feature-engineering-tutorial)
 
-https://www.kaggle.com/code/cdeotte/titanic-wcg-xgboost-0-84688
+### Chris Deotte의 WCG + XGBoost
 
-**Chris Deotte — Titanic Mega Model.** 관련 그룹·도메인 규칙을 조사한 공개 자료입니다. 모든 원본 R 실행을 동일 환경에서 재현했다고 주장하지 않습니다.
+정교한 여성과 아동 그룹, 역할별 예측 규칙을 참고했다. Python으로 근사한 코드와 공개 실행 출력에서 가져온 test 예측이 함께 존재하며 두 출처를 구분해 기록했다.
 
-https://www.kaggle.com/code/cdeotte/titantic-mega-model-0-84210
+[원본 노트북](https://www.kaggle.com/code/cdeotte/titanic-wcg-xgboost-0-84688)
 
-**L. D. Freeman — A Data Science Framework to Achieve 99% Accuracy.** 사용자의 초기 토론에서 검토한 자료입니다. 제목의 99%를 이 프로젝트의 점수나 무누출 test 점수로 인용하지 않습니다.
+### Chris Deotte의 Mega Model
 
-https://www.kaggle.com/code/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy
+관련 그룹과 도메인 규칙을 조사할 때 참고했다. 원본 R 환경을 동일하게 재실행한 완전 재현이라고 설명하지 않는다.
 
-## 3. 공식 문서
+[원본 노트북](https://www.kaggle.com/code/cdeotte/titantic-mega-model-0-84210)
 
-- [Kaggle Titanic](https://www.kaggle.com/competitions/titanic): 데이터·평가·규칙의 원 출처.
-- [Kaggle CLI](https://github.com/Kaggle/kaggle-cli): 데이터 다운로드와 제출 기록 조회 도구.
-- [scikit-learn common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html): 전처리 불일치, 데이터 누출, randomness를 해석할 때의 기준.
-- [scikit-learn nested CV](https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html): 선택과 평가를 분리하는 원리.
-- [GitHub repository rename](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository): 저장소 이름 변경과 기존 주소 처리.
+### L. D. Freeman의 Data Science Framework
 
-## 4. 출처 미확정 부분
+초기 대화에서 고득점 방식과 과적합 문제를 검토할 때 참고한 자료다. 제목의 99%를 이 프로젝트나 무누출 test 성능의 수치로 사용하지 않았다.
 
-공개 노트북 미러의 정확한 commit·사용 라이선스·R 실행 환경은 이 스냅샷에서 모두 고정되지 않았습니다. 따라서 다운로드한 제3자 노트북 전체를 다시 배포하지 않으며, 원저자 링크와 역사적 코드의 출처 주석을 남깁니다. 프로젝트 전체에 일괄 MIT 라이선스를 새로 부여하지 않습니다.
+[원본 노트북](https://www.kaggle.com/code/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy)
 
-Antigravity 초기 설정과 이후 GPT 웹 세션 중심 작업이라는 설명은 소유자의 진술과 이 대화의 실행 기록을 근거로 합니다. 모든 스킬 버전과 프롬프트 원문을 시간순·불변 형태로 보존한 증거는 없으므로 완전한 재현 패키지라고 부르지 않습니다.
+## 도구와 검증 문서
+
+| 자료 | 용도 |
+|---|---|
+| [Kaggle Titanic](https://www.kaggle.com/competitions/titanic) | 공식 데이터, 평가와 대회 규칙 |
+| [Kaggle CLI](https://github.com/Kaggle/kaggle-cli) | 다운로드, 제출과 결과 확인 |
+| [scikit-learn common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) | 전처리 불일치, 누출과 randomness |
+| [scikit-learn nested CV](https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html) | 모델 선택과 평가 분리 |
+| [Viz.js API](https://viz-js.com/api/) | DOT 소스를 SVG로 렌더링 |
+| [sharp](https://sharp.pixelplumbing.com/) | 흐름도 PNG 생성 |
+
+## 기록하지 못한 부분
+
+공개 노트북 미러의 정확한 commit, 실행 환경과 재사용 조건을 모든 자료에서 고정하지 못했다. 다운로드한 제3자 노트북 전체를 다시 배포하지 않고 원저자 링크와 코드의 출처 주석을 남긴 이유다. 프로젝트 전체에 일괄적인 MIT 라이선스를 새로 부여하지 않았다.
+
+초기 설정은 Antigravity에서, 이후 작업은 GPT 웹 세션에서 진행했다. 모든 스킬 버전과 프롬프트를 시간순으로 완전히 보존한 것은 아니므로 같은 대화 과정을 처음부터 그대로 재현하는 패키지는 아니다.

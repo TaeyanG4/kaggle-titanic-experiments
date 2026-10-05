@@ -1,21 +1,9 @@
 # Changelog
 
-## 2026-10-05 — Competition-centered repository name
+## 2026-10-05
 
-- Adopted the owner's selected name, `kaggle-titanic-experiments`, replacing the interim `titanic-gpt-web-experiment` name without rewriting Git history.
-- Updated the Korean/English README titles to **Kaggle Titanic Experiments** with the competition subtitle **Titanic — Machine Learning from Disaster**.
-- Updated the About description, cover artwork and generator, clone/remote instructions, and active handoff documents.
-- Retained GPT web-session execution and Antigravity initial setup as methodology, together with all validation/provenance qualifications.
-- Preserved historical scripts, predictions, numerical results and archived notes; this is a documentation/identity change, not a new model experiment.
+Published the v1-v47 experiment record with Korean documentation, an English overview, submission receipts, numerical charts and reproduction tools. Separated earlier practice files from the 2026 experiment and retained the historical scripts and prediction files.
 
-## 2026-10-05 — Campaign closeout
+Expanded the experiment log with feature formulas, ensemble construction, before-and-after results and rejected candidates. Revised the prose in the active documents and replaced inline flowchart blocks with rendered PNGs, SVGs and editable DOT sources.
 
-- Renamed the existing repository to `titanic-gpt-web-experiment`; retained Git history.
-- Separated legacy 2023 practice from the October 2026 experiment.
-- Published Korean documentation, an English overview, actual submission charts, and a detailed validation/provenance audit.
-- Preserved historical experiment code, derived evidence and frozen prediction files; stripped new notebook outputs.
-- Captured read-only Kaggle submission receipts, input fingerprints and a finalization-time environment snapshot.
-- Added artifact replay and verification tools. They do not train models or submit to Kaggle.
-- Qualified earlier blanket claims about leakage, causal improvement, headroom, nested selection and exhausted search space.
-
-The score record remains the experiment's historical result; documentation cleanup is not a new ML experiment.
+Added checks for diagram hashes, image structure, HTML image links and active-document consistency. No model was retrained and no new Kaggle submission was made as part of documentation work.

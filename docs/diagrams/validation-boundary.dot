@@ -1,0 +1,27 @@
+digraph boundary {
+  graph [rankdir=TB, bgcolor="white", pad="0.32", nodesep="0.48", ranksep="0.46", fontname="Arial", label="Group-target features: keep validation labels out", labelloc="t", labeljust="l", fontsize=23, fontcolor="#16324a", splines=polyline];
+  node [shape=box, style="rounded,filled", fillcolor="#f3f7fa", color="#bdcbd5", fontname="Arial", fontsize=16, fontcolor="#16324a", margin="0.26,0.16", penwidth=1.2];
+  edge [color="#687c89", arrowsize=0.8, penwidth=1.3, fontname="Arial", fontsize=12, fontcolor="#465c6b"];
+  split [label="Fix the outer split first"];
+  reference [label="Training fold\nInput features and known labels", fillcolor="#e4f3ef", color="#82b5a7"];
+  valx [label="Validation inputs\nNo validation labels supplied"];
+  valy [label="Validation labels\nReserved for scoring only", fillcolor="#fff5e7", color="#d2b587"];
+  stats [label="Build group statistics\nUse training labels only"];
+  trainfeatures [label="Training group features\nExclude self / inner cross-fit"];
+  valfeatures [label="Validation group features\nLook up training-group evidence"];
+  fit [label="Fit the model"];
+  pred [label="Predict the validation fold"];
+  metric [label="Compare prediction with labels\nAccuracy and other diagnostics", fillcolor="#e4f3ef", color="#82b5a7"];
+  {rank=same; reference; valx; valy;}
+  {rank=same; trainfeatures; valfeatures;}
+  split -> reference; split -> valx; split -> valy;
+  reference -> stats;
+  stats -> trainfeatures;
+  stats -> valfeatures;
+  valx -> valfeatures;
+  trainfeatures -> fit;
+  fit -> pred;
+  valfeatures -> pred;
+  pred -> metric;
+  valy -> metric [style=dashed, label="scoring only"];
+}

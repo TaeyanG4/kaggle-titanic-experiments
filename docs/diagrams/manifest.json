@@ -1,0 +1,73 @@
+{
+  "renderer": "Graphviz 16.1.0; @viz-js/viz 3.31.0; sharp 0.35.5",
+  "diagrams": [
+    {
+      "name": "workflow",
+      "source": "docs/diagrams/workflow.dot",
+      "source_sha256": "f73e2fe3594be46a3d25d08a138bf2e62718c6a1bbf66a565cc26eeed4e31c2a",
+      "width": 2657,
+      "height": 3714,
+      "files": [
+        {
+          "path": "docs/assets/workflow.png",
+          "sha256": "02decd347365086695f4409b5a5e3cc6090ae7cbea4183e4c20c3d1685af0e0e"
+        },
+        {
+          "path": "docs/assets/workflow.svg",
+          "sha256": "498f1211bd514532e43ad8e466019197d57f39a50463102b04550fc99a2e0d0d"
+        }
+      ]
+    },
+    {
+      "name": "v5-ensemble",
+      "source": "docs/diagrams/v5-ensemble.dot",
+      "source_sha256": "a39652b8060819a2eda17f11583c2f2da250b32dce57b54cdd8087fe3b4f5d32",
+      "width": 4578,
+      "height": 2775,
+      "files": [
+        {
+          "path": "docs/assets/v5-ensemble.png",
+          "sha256": "752c0dbcb217913356ff5a7b8ab8ed1476f456a1338a9627abd3ec2c0ac642f4"
+        },
+        {
+          "path": "docs/assets/v5-ensemble.svg",
+          "sha256": "2f31297054c1384c845e92a20992f706c2756684743ca31578e37c3ea4bcdb9a"
+        }
+      ]
+    },
+    {
+      "name": "validation-boundary",
+      "source": "docs/diagrams/validation-boundary.dot",
+      "source_sha256": "8ee96eef3768b909d8e5f627fe6379529c12d10e950c063e69344c6e5b3839cc",
+      "width": 4143,
+      "height": 3348,
+      "files": [
+        {
+          "path": "docs/assets/validation-boundary.png",
+          "sha256": "0201867422b520e13d0101a51958aa3a53bc52a1a0ab456f4f34f8a6d6982b8a"
+        },
+        {
+          "path": "docs/assets/validation-boundary.svg",
+          "sha256": "c5291a4100c78bfbdcfb0f5ff9f981c00d9e75c894ba570cd68f2bb96157bb56"
+        }
+      ]
+    },
+    {
+      "name": "final-lineage",
+      "source": "docs/diagrams/final-lineage.dot",
+      "source_sha256": "8e8aef9bd770b5e714036edbb569a92d68723a9c46db0c7ddd99cb6b9f0acdb8",
+      "width": 3230,
+      "height": 2726,
+      "files": [
+        {
+          "path": "docs/assets/final-lineage.png",
+          "sha256": "4231282cde3c13b2ac63457f0fb0224349e316d1659ff178bcb686d9bea96ddc"
+        },
+        {
+          "path": "docs/assets/final-lineage.svg",
+          "sha256": "2eb42c5c4340857d152da15b4f61529d659c17a2d665d89ff29309c87cd14532"
+        }
+      ]
+    }
+  ]
+}
